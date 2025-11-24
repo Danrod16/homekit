@@ -3,516 +3,778 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- change title and description to your own -->
-      <title>SEO frendly title - the keywords you want to rank for</title>
-      <meta name="description" content="SEO frendly description - the keywords you want to rank for">
+      <!-- REPLACE: Update with your SEO-friendly title -->
+      <title>Your Business Name: Your Value Proposition</title>
+      <!-- REPLACE: Update with your SEO-friendly description -->
+      <meta name="description" content="Your business description with keywords you want to rank for" />
       <link rel="icon" type="image/x-icon" href="images/favicon.ico">
       <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
       <script src="https://cdn.tailwindcss.com"></script>
-      <!-- Development version -->
       <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-      <!-- Production version -->
       <script src="https://unpkg.com/lucide@latest"></script>
+      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <!-- OPTIONAL: Add your analytics script here -->
   </head>
   
-  <!-- DISCLAIMER: This template is an exmaple template, feel free to visit hyperUI.com or DaisyUI.com to change specific section by copy pasting the code -->
+  <body data-theme="light" onload="AOS.init();">
+      <!-- Navbar -->
+      <!-- REPLACE: Update navigation links to match your sections -->
+      <nav class="navbar bg-white fixed top-0 left-0 right-0 z-50 p-6" data-aos="fade-down">
+          <div class="container mx-auto flex justify-between items-center px-4">
+              <div class="flex items-center">
+                  <!-- REPLACE: Update logo path and alt text -->
+                  <a href="/" class="btn btn-ghost text-xl ml-2">
+                    <img src="images/logo.png" alt="Your Logo" class="w-16">
+                  </a>
+              </div>
+              <div class="flex-none hidden lg:block">
+                  <ul class="menu menu-horizontal px-1">
+                      <!-- REPLACE: Update menu items with your own sections -->
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#how-it-works">How It Works</a></li>
+                      <li><a href="#packages">Pricing</a></li>
+                      <li><a href="#testimonials">Testimonials</a></li>
+                      <li><a href="#faq">FAQ</a></li>
+                      <!-- REPLACE: Update with your booking/contact link -->
+                      <li><a href="#cta" class="btn btn-primary btn-sm">Get Started</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
 
-  <body data-theme="light">
-      <div class="navbar bg-base-100 fixed top-0 left-0 right-0 z-50">
-          <div class="flex-1">
-              <img src="images/logo.png" alt="Lightning Landing Logo" class="w-10 h-10"> <!-- Change your logo here  -->
-              <a href="/" class="btn btn-ghost text-xl">Lightning Landing</a> <!-- Change your company name here  -->
-          </div>
-          <div class="flex-none">
-              <ul class="menu menu-horizontal px-1">
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#pricing">Pricing</a></li>
-                  <li><a href="#testimonials">Testimonials</a></li>
-              </ul>
-          </div>
-      </div>
-      <div class="hero bg-base-200 min-h-screen">
-          <div class="hero-content flex-col lg:flex-row-reverse">
-              <!-- Use a screenshot/demo/image of your best work that instantly shows value -->
-              <!-- Replace the hero-image.png in the images folder with your own image -->
-              <img src="images/hero-picture.png" class="max-w-sm rounded-lg shadow-2xl lg:max-w-xl" alt="Portfolio showcase of successful client projects" />
-              <div>
-                  <!-- Keep it short, focus on the value you deliver -->
-                  <h1 class="text-5xl font-bold">We Turn Your Ideas Into Successful Products</h1>
-                  <!-- Explain how you deliver on the promise, be specific -->
-                  <p class="py-6">Our team of expert developers and designers craft custom software solutions that help businesses scale and delight their customers.</p>
-                  <div class="flex flex-col items-start">
-                      <!-- Action-oriented CTA that creates urgency -->
-                      <a href="#cta" class="btn btn-primary">Schedule Free Consultation</a>
-                      <!-- Social Proof: Change profile picture of users to your own profile picture and text to your own text-->
-                      <div class="avatar-group -space-x-6 rtl:space-x-reverse mt-3">
-                          <div class="avatar">
-                              <div class="w-12">
-                                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+      <!-- 1. Hero Section -->
+      <!-- REPLACE: Update all text, badge, and hero image -->
+      <section class="hero min-h-screen pt-16 pb-16" data-aos="fade-up">
+          <div class="container mx-auto flex flex-col lg:flex-row-reverse items-center px-4">
+              <!-- REPLACE: Add your hero image (replace with your own image path) -->
+              <div class="max-w-xl w-full rounded-xl mb-4 sm:mb-0 bg-base-200 h-96 flex items-center justify-center">
+                <i data-lucide="image" class="w-32 h-32 text-base-content opacity-20"></i>
+              </div>
+              <div class="text-center lg:text-left lg:mr-8">
+                  <!-- REPLACE: Update badge text or remove if not needed -->
+                  <div class="badge badge-outline mb-4 border-secondary text-secondary">UPDATE: Limited spots available!</div>
+                  <!-- REPLACE: Update with your main headline -->
+                  <h1 class="text-5xl font-bold">Your Compelling Headline That Shows Value</h1>
+                  <!-- REPLACE: Update with your value proposition -->
+                  <p class="py-6">Explain how you help your customers and what makes your solution unique. Focus on benefits, not features.</p>
+                  <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                      <!-- REPLACE: Update CTA button links and text -->
+                      <a href="#packages" class="btn btn-primary">View Pricing</a>
+                      <a href="#cta" class="btn btn-outline">Get Started</a>
+                  </div>
+                  <!-- Social Proof Section -->
+                  <div class="mt-6">
+                      <!-- REPLACE: Update social proof text -->
+                      <p class="text-sm text-gray-600">Trusted by [your target audience]</p>
+                      <div class="flex mt-2 justify-center lg:justify-start">
+                          <!-- REPLACE: Add customer profile images or remove this section -->
+                          <div class="avatar-group -space-x-4">
+                              <div class="avatar">
+                                  <div class="w-8">
+                                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Customer 1" />
+                                  </div>
+                              </div>
+                              <div class="avatar">
+                                  <div class="w-8">
+                                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Customer 2" />
+                                  </div>
+                              </div>
+                              <div class="avatar">
+                                  <div class="w-8">
+                                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Customer 3" />
+                                  </div>
                               </div>
                           </div>
-                          <div class="avatar">
-                              <div class="w-12">
-                                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                              </div>
-                          </div>
-                          <div class="avatar">
-                              <div class="w-12">
-                                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                              </div>
-                          </div>
-                          <div class="avatar placeholder">
-                              <div class="bg-neutral text-neutral-content w-12">
-                                  <span>+99</span>
-                              </div>
-                          </div>
-                      </div>
-                      <small class="text-gray-500">Trusted by 100+ companies</small>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- The problem we solve -->
-      <div class="p-8 md:p-12 lg:px-16 lg:py-24">
-          <div class="mx-auto max-w-lg text-center">
-              <!-- Change the text to your own text, explain the problem you solve and try to use data to make it more convincing-->
-              <h2 class="text-2xl font-bold md:text-3xl">Most startups spend more than 4000€ on their website</h2>
-              <p class="hidden sm:mt-4 sm:block">2000€ is the average cost of a website in Germany, maintenance costs and hosting is often not included in the price.</p>
-          </div>
-          <div class="mx-auto mt-8 max-w-xl">
-              <img src="images/problem.png" alt="Problem" class="w-full rounded-lg shadow-2xl">
-          </div>
-      </div>
-      <!-- Our Services -->
-      <div class="my-20" id="services">
-          <div class="container mx-auto px-12 bg-base-200 rounded-lg p-12">
-              <h2 class="text-4xl font-bold text-base-content">Why choose us?</h2>
-              <p class="mb-4 mt-2 text-base-content/80">Our customers choose us because we offer a wide range of services to meet their needs at the best price.</p>
-              <!-- Add screenshots of your best work here, make it visually appealing, jsut replace the serviceN.png with your own images -->
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 col-span-1 min-h-[200px] bg-[url('/images/service1.png')] bg-cover bg-center group hover:bg-base-100/90">
-                      <div class="card-body mt-auto bg-base-100/0 opacity-0 group-hover:opacity-100 group-hover:bg-primary rounded-lg transition-all duration-300">
-                          <h2 class="card-title text-base-content">Website designed & developed in less than 10 days</h2>
-                      </div>
-                  </div>
-                  <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 lg:col-span-2 min-h-[200px] bg-[url('/images/service2.png')] bg-cover bg-center group hover:bg-primary">
-                      <div class="card-body mt-auto bg-base-100/0 opacity-0 group-hover:opacity-100 group-hover:bg-primary rounded-lg transition-all duration-300">
-                          <h2 class="card-title text-base-content">Fixed price for all our services, no hidden costs</h2>
-                      </div>
-                  </div>
-                  <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 lg:col-span-2 min-h-[200px] bg-[url('/images/service3.png')] bg-cover bg-center group hover:bg-primary">
-                      <div class="card-body mt-auto bg-base-100/0 opacity-0 group-hover:opacity-100 group-hover:bg-primary rounded-lg transition-all duration-300">
-                          <h2 class="card-title text-base-content">Unlimited revisions until you're 100% satisfied</h2>
-                      </div>
-                  </div>
-                  <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 col-span-1 min-h-[200px] bg-[url('/images/service4.png')] bg-cover bg-center group hover:bg-primary">
-                      <div class="card-body mt-auto bg-base-100/0 opacity-0 group-hover:opacity-100 group-hover:bg-primary rounded-lg transition-all duration-300">
-                          <h2 class="card-title text-base-content">Best price in the market</h2>
-                      </div>
-                  </div>
-              </div>
-              </div>
-          </div>
-      </div>
-      <!-- pricing -->
-      <div class="py-24 sm:py-32" id="pricing">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl sm:text-center">
-              <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Affordable website development</h2>
-              <p class="mt-6 text-lg leading-8">Get your professional website built in less than 10 days at a fixed price that's significantly lower than the market average of 4000€.</p>
-            </div>
-            <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
-              <div class="p-8 sm:p-10 lg:flex-auto">
-                <h3 class="text-2xl font-bold tracking-tight">Complete Website Package</h3>
-                <p class="mt-6 text-base leading-7">Everything you need to get your professional website up and running, with unlimited revisions until you're completely satisfied.</p>
-                <div class="mt-10 flex items-center gap-x-4">
-                  <h4 class="flex-none text-sm font-semibold leading-6">What's included</h4>
-                  <div class="h-px flex-auto"></div>
-                </div>
-                <ul role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 sm:grid-cols-2 sm:gap-6">
-                  <li class="flex gap-x-3">
-                    <i data-lucide="check"></i>
-                    Custom website design
-                  </li>
-                  <li class="flex gap-x-3">
-                    <i data-lucide="check"></i>
-                    Mobile-responsive layout
-                  </li>
-                  <li class="flex gap-x-3">
-                    <i data-lucide="check"></i>
-                    Unlimited revisions
-                  </li>
-                  <li class="flex gap-x-3">
-                    <i data-lucide="check"></i>
-                    10-day delivery
-                  </li>
-                </ul>
-              </div>
-              <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                <div class="rounded-2xl py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                  <div class="mx-auto max-w-xs px-8">
-                    <p class="text-base font-semibold">Pay once, own it forever</p>
-                    <p class="mt-6 flex items-baseline justify-center gap-x-2">
-                      <span class="text-5xl font-bold tracking-tight">950</span>
-                      <span class="text-sm font-semibold leading-6 tracking-wide">USD</span>
-                    </p>
-                    <a href="#cta" class="btn btn-primary mt-4">Join the waitlist</a>
-                    <p class="mt-6 text-xs leading-5">Invoices and receipts available for easy company reimbursement</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Testimonials -->
-          <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16" id="testimonials">
-            <h2 class="text-center text-4xl font-bold tracking-tight sm:text-5xl">
-              Read trusted reviews from our customers
-            </h2>
-            <div class="mt-8 [column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8">
-              <div class="mb-8 sm:break-inside-avoid">
-                <blockquote class="rounded-lg bg-base-200 p-6 shadow-sm sm:p-8">
-                  <div class="flex items-center gap-4">
-                    <img
-                      alt=""
-                      src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                      class="size-14 rounded-full object-cover"
-                    />
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-accent">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-                      <p class="mt-0.5 text-lg font-medium">Paul Starr</p>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-base-200">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a
-                    consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus
-                    error officiis atque voluptates magnam!
-                  </p>
-                </blockquote>
-              </div>
-              <div class="mb-8 sm:break-inside-avoid">
-                <blockquote class="rounded-lg bg-base-200 p-6 shadow-sm sm:p-8">
-                  <div class="flex items-center gap-4">
-                    <img
-                      alt=""
-                      src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                      class="size-14 rounded-full object-cover"
-                    />
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-accent">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-                      <p class="mt-0.5 text-lg font-medium">Paul Starr</p>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-base-600">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad mollitia rerum quo unde
-                    neque atque molestias quas pariatur! Sint, maxime?
-                  </p>
-                </blockquote>
-              </div>
-              <div class="mb-8 sm:break-inside-avoid">
-                <blockquote class="rounded-lg bg-base-200 p-6 shadow-sm sm:p-8">
-                  <div class="flex items-center gap-4">
-                    <img
-                      alt=""
-                      src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                      class="size-14 rounded-full object-cover"
-                    />
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-accent">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-                      <p class="mt-0.5 text-lg font-medium">Paul Starr</p>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-base-700">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit esse delectus,
-                    maiores fugit, reiciendis culpa inventore sint accusantium libero dolore eos quasi a ex
-                    aliquam molestiae. Tenetur hic delectus maxime.
-                  </p>
-                </blockquote>
-              </div>
-              <div class="mb-8 sm:break-inside-avoid">
-                <blockquote class="rounded-lg bg-base-200 p-6 shadow-sm sm:p-8">
-                  <div class="flex items-center gap-4">
-                    <img
-                      alt=""
-                      src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                      class="size-14 rounded-full object-cover"
-                    />
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-accent">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-                      <p class="mt-0.5 text-lg font-medium">Paul Starr</p>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-base-700">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, fuga?
-                  </p>
-                </blockquote>
-              </div>
-              <div class="mb-8 sm:break-inside-avoid">
-                <blockquote class="rounded-lg bg-base-200 p-6 shadow-sm sm:p-8">
-                  <div class="flex items-center gap-4">
-                    <img
-                      alt=""
-                      src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                      class="size-14 rounded-full object-cover"
-                    />
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-accent">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-                      <p class="mt-0.5 text-lg font-medium">Paul Starr</p>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-base-700">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate officia natus
-                    blanditiis rerum incidunt ex autem repudiandae doloribus eveniet quia? Culpa commodi
-                    quae atque perspiciatis? Provident, magni beatae saepe porro aspernatur facere neque
-                    sunt possimus assumenda perspiciatis aperiam quisquam animi libero voluptatem fuga.
-                    Repudiandae, facere? Nemo reprehenderit quas ratione quis.
-                  </p>
-                </blockquote>
-              </div>
-              <div class="mb-8 sm:break-inside-avoid">
-                <blockquote class="rounded-lg bg-base-200 p-6 shadow-sm sm:p-8">
-                  <div class="flex items-center gap-4">
-                    <img
-                      alt=""
-                      src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                      class="size-14 rounded-full object-cover"
-                    />
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-accent">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-                      <p class="mt-0.5 text-lg font-medium">Paul Starr</p>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-base-700">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, rerum. Nobis laborum
-                    praesentium necessitatibus vero.
-                  </p>
-                </blockquote>
-              </div>
-              <div class="mb-8 sm:break-inside-avoid">
-                <blockquote class="rounded-lg bg-base-200 p-6 shadow-sm sm:p-8">
-                  <div class="flex items-center gap-4">
-                    <img
-                      alt=""
-                      src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                      class="size-14 rounded-full object-cover"
-                    />
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-accent">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-                      <p class="mt-0.5 text-lg font-medium">Paul Starr</p>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-base-700">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores quaerat quasi ipsa
-                    repellendus quam! Beatae pariatur quia distinctio fugit repellendus repudiandae nostrum
-                    consectetur quibusdam quo.
-                  </p>
-                </blockquote>
-              </div>
-              <div class="mb-8 sm:break-inside-avoid">
-                <blockquote class="rounded-lg bg-base-200 p-6 shadow-sm sm:p-8">
-                  <div class="flex items-center gap-4">
-                    <img
-                      alt=""
-                      src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                      class="size-14 rounded-full object-cover"
-                    />
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-accent">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-
-                      <p class="mt-0.5 text-lg font-medium">Paul Starr</p>
-                    </div>
-                  </div>
-
-                  <p class="mt-4 text-base-700">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, modi!
-                  </p>
-                </blockquote>
-              </div>
-
-              <div class="mb-8 sm:break-inside-avoid">
-                <blockquote class="rounded-lg bg-base-200 p-6 shadow-sm sm:p-8">
-                  <div class="flex items-center gap-4">
-                    <img
-                      alt=""
-                      src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                      class="size-14 rounded-full object-cover"
-                    />
-
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-accent">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-                      <p class="mt-0.5 text-lg font-medium">Paul Starr</p>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-base-700">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam, unde molestiae
-                    commodi temporibus dicta.
-                  </p>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-      <!-- FAQ -->
-      <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 sm:py-12 lg:px-8 lg:py-16 my-26" id="faq">
-        <div class="grid gap-4 lg:grid-cols-3 lg:gap-8">
-        <div class="h-auto">
-            <h2 class="text-base font-semibold leading-7 text-primary">Common Questions</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Frequently Asked Questions</p>
-            <p class="mt-6 text-lg leading-8">Everything you need to know about our web development service</p>
-        </div>
-        <div class="h-auto lg:col-span-2">
-          <div class="join join-vertical w-full">
-            <div class="collapse collapse-arrow join-item border-base-300 border">
-                <input type="radio" name="my-accordion-4" checked="checked" />
-                <div class="collapse-title text-xl font-medium">What's included in the website package?</div>
-                <div class="collapse-content">
-                <p>Our complete website package includes everything you need for a professional online presence:</p>
-                <ul class="list-disc pl-6 mt-2">
-                  <li>Custom website design tailored to your brand</li>
-                  <li>Mobile-responsive layout that works on all devices</li>
-                  <li>Unlimited revisions until you're completely satisfied</li>
-                  <li>Fast 10-day delivery timeline</li>
-                  <li>Professional consultation to understand your needs</li>
-                </ul>
-            </div>
-            </div>
-            <div class="collapse collapse-arrow join-item border-base-300 border">
-                <input type="radio" name="my-accordion-4" />
-                <div class="collapse-title text-xl font-medium">How does the payment process work?</div>
-                <div class="collapse-content">
-                <p>We offer a simple, one-time payment of $950 USD. Once the payment is processed, we'll begin work on your website immediately. You'll receive a professional invoice that can be used for company reimbursement if needed.</p>
-                </div>
-            </div>
-            <div class="collapse collapse-arrow join-item border-base-300 border">
-                <input type="radio" name="my-accordion-4" />
-                <div class="collapse-title text-xl font-medium">What happens after I join the waitlist?</div>
-                <div class="collapse-content">
-                <p>After joining the waitlist, we'll contact you to schedule an initial consultation. During this call, we'll discuss your website needs, timeline, and answer any questions you might have. Once we agree to proceed, we'll begin the design process immediately.</p>
-                </div>
-            </div>
-            <div class="collapse collapse-arrow join-item border-base-300 border">
-                <input type="radio" name="my-accordion-4" />
-                <div class="collapse-title text-xl font-medium">What if I need changes after the website is complete?</div>
-                <div class="collapse-content">
-                    <p>We offer unlimited revisions during the development process to ensure you're completely satisfied with your website. After the website is complete, we'll provide clear documentation on how to make basic updates yourself. For major changes, we offer affordable maintenance packages.</p>
-                </div>
-            </div>
-            <div class="collapse collapse-arrow join-item border-base-300 border">
-                <input type="radio" name="my-accordion-4" />
-                <div class="collapse-title text-xl font-medium">Why is your price lower than the market average?</div>
-                <div class="collapse-content">
-                    <p>We've streamlined our development process and use modern tools that allow us to work efficiently without compromising on quality. This enables us to offer professional websites at a fraction of the typical market price of 4000€, making quality web development accessible to more businesses.</p>           
-                </div>
-            </div>
-            <div class="collapse collapse-arrow join-item border-base-300 border">
-                <input type="radio" name="my-accordion-4" />
-                <div class="collapse-title text-xl font-medium">Do you provide hosting and domain services?</div>
-                <div class="collapse-content">
-                    <p>Yes! We can help you set up hosting and acquire a domain name for your website. We'll recommend reliable and cost-effective hosting solutions that ensure your website loads quickly and remains secure. We can either manage these services for you or provide guidance if you prefer to handle them yourself.</p>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- final CTA -->
-        <section class="mb-12 lg:mb-24">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
-              <div class="lg:flex lg:items-center lg:justify-between w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
-                  <h2 class="text-3xl font-extrabold sm:text-4xl">
-                      <span class="block">
-                          Ready to get your professional website?
-                      </span>
-                      <span class="block">
-                          Join our waitlist today and save 75%.
-                      </span>
-                  </h2>
-                  <div class="lg:mt-0 lg:flex-shrink-0">
-                      <div class=" inline-flex rounded-md shadow mt-8 lg:mt-0">
-                          <a href="#" class="btn btn-primary">Join the waitlist</a>
+                          <!-- REPLACE: Update with your metrics -->
+                          <span class="ml-3 text-gray-600 flex items-center">50+ happy customers</span>
                       </div>
                   </div>
               </div>
           </div>
       </section>
-          <!-- Footer -->
-      <footer class="footer bg-neutral text-neutral-content p-10">
+
+      <!-- 2. Types of Products/Services Section -->
+      <!-- REPLACE: Update section title and all product/service cards -->
+      <section class="py-24" id="types-of-apps" data-aos="fade-up">
+          <div class="container mx-auto px-4">
+              <!-- REPLACE: Update section heading -->
+              <h2 class="text-3xl font-bold text-center mb-12">What Can We Build Together?</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <!-- REPLACE: Each card - update logo, title, description, and links -->
+                  <!-- Card 1 -->
+                  <div class="card bg-base-100 shadow-xl min-h-64">
+                    <div class="card-body flex flex-col justify-end items-start p-8">
+                      <!-- REPLACE: Add your product logo or icon -->
+                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
+                        <i data-lucide="package" class="w-12 h-12 text-base-content opacity-30"></i>
+                      </div>
+                      <!-- REPLACE: Update title and description -->
+                      <h3 class="card-title text-xl mb-2">Service Type 1</h3>
+                      <p class="text-base-content text-base">Brief description of your first service or product type.</p>
+                    </div>
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="card bg-base-100 shadow-xl  min-h-64">
+                    <div class="card-body flex flex-col justify-end items-start p-8">
+                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
+                        <i data-lucide="box" class="w-12 h-12 text-base-content opacity-30"></i>
+                      </div>
+                      <h3 class="card-title text-xl mb-2">Service Type 2</h3>
+                      <p class="text-base-content text-base">Brief description of your second service or product type.</p>
+                    </div>
+                  </div>
+                  <!-- Card 3 -->
+                  <div class="card bg-base-100 shadow-xl  min-h-64">
+                    <div class="card-body flex flex-col justify-end items-start p-8">
+                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
+                        <i data-lucide="layers" class="w-12 h-12 text-base-content opacity-30"></i>
+                      </div>
+                      <h3 class="card-title text-xl mb-2">Service Type 3</h3>
+                      <p class="text-base-content text-base">Brief description of your third service or product type.</p>
+                    </div>
+                  </div>
+                  <!-- Card 4 -->
+                  <div class="card bg-base-100 shadow-xl  min-h-64">
+                    <div class="card-body flex flex-col justify-end items-start p-8">
+                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
+                        <i data-lucide="grid" class="w-12 h-12 text-base-content opacity-30"></i>
+                      </div>
+                      <h3 class="card-title text-xl mb-2">Service Type 4</h3>
+                      <p class="text-base-content text-base">Brief description of your fourth service or product type.</p>
+                    </div>
+                  </div>
+                  <!-- Card 5 -->
+                  <div class="card bg-base-100 shadow-xl  min-h-64">
+                    <div class="card-body flex flex-col justify-end items-start p-8">
+                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
+                        <i data-lucide="star" class="w-12 h-12 text-base-content opacity-30"></i>
+                      </div>
+                      <h3 class="card-title text-xl mb-2">Service Type 5</h3>
+                      <p class="text-base-content text-base">Brief description of your fifth service or product type.</p>
+                    </div>
+                  </div>
+                  <!-- Card 6 -->
+                  <div class="card bg-base-100 shadow-xl  min-h-64">
+                    <div class="card-body flex flex-col justify-end items-start p-8">
+                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
+                        <i data-lucide="zap" class="w-12 h-12 text-base-content opacity-30"></i>
+                      </div>
+                      <h3 class="card-title text-xl mb-2">Service Type 6</h3>
+                      <p class="text-base-content text-base">Brief description of your sixth service or product type.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- 3. How It Works Section -->
+      <!-- REPLACE: Update all steps, images, and descriptions -->
+      <section class="py-24" id="how-it-works" data-aos="fade-up">
+          <div class="container mx-auto px-4">
+              <!-- REPLACE: Update section heading -->
+              <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                  <!-- Step 1 -->
+                  <div>
+                    <div class="card-body flex flex-col items-center">
+                      <div class="text-primary text-2xl font-bold mb-2">Step 1</div>
+                      <!-- REPLACE: Update step title -->
+                      <div class="font-semibold text-xl mb-4">First Step Title</div>
+                      <!-- REPLACE: Add illustration or image for step 1 -->
+                      <div class="mx-auto mb-6 w-64 h-64 bg-base-200 rounded-lg flex items-center justify-center">
+                        <i data-lucide="lightbulb" class="w-24 h-24 text-primary opacity-30"></i>
+                      </div>
+                      <!-- REPLACE: Update step description -->
+                      <p class="text-base-content">Describe what happens in the first step of your process.</p>
+                    </div>
+                  </div>
+                  <!-- Step 2 -->
+                  <div>
+                    <div class="card-body flex flex-col items-center">
+                      <div class="text-primary text-2xl font-bold mb-2">Step 2</div>
+                      <div class="font-semibold text-xl mb-4">Second Step Title</div>
+                      <div class="mx-auto mb-6 w-64 h-64 bg-base-200 rounded-lg flex items-center justify-center">
+                        <i data-lucide="settings" class="w-24 h-24 text-primary opacity-30"></i>
+                      </div>
+                      <p class="text-base-content">Describe what happens in the second step of your process.</p>
+                    </div>
+                  </div>
+                  <!-- Step 3 -->
+                  <div>
+                    <div class="card-body flex flex-col items-center">
+                      <div class="text-primary text-2xl font-bold mb-2">Step 3</div>
+                      <div class="font-semibold text-xl mb-4">Third Step Title</div>
+                      <div class="mx-auto mb-6 w-64 h-64 bg-base-200 rounded-lg flex items-center justify-center">
+                        <i data-lucide="rocket" class="w-24 h-24 text-primary opacity-30"></i>
+                      </div>
+                      <p class="text-base-content">Describe what happens in the third step of your process.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- 4. About Section -->
+      <!-- REPLACE: Update all personal/company information, photo, and skills -->
+      <section class="py-24 mt-10" id="about" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/3 flex justify-center">
+                    <!-- REPLACE: Add your profile photo -->
+                    <div class="w-64 h-64 flex overflow-hidden">
+                        <figure class="rounded-lg shadow-lg overflow-hidden bg-base-200 flex items-center justify-center w-full h-full">
+                          <i data-lucide="user-circle" class="w-32 h-32 text-base-content opacity-20"></i>
+                        </figure>
+                    </div>
+                </div>
+                <div class="lg:w-2/3">
+                    <!-- REPLACE: Update section heading -->
+                    <h2 class="text-3xl font-bold mb-6">Meet Your [Role/Team]</h2>
+                    <div class="prose max-w-none">
+                        <!-- REPLACE: Update all paragraph content with your story -->
+                        <p class="mb-4">
+                            Introduce yourself or your team. Share your background and experience.
+                        </p>
+                        <p class="mb-4">
+                            Explain your expertise and what makes you uniquely qualified to help your customers.
+                        </p>
+                        <p class="mb-4">
+                            Connect with your target audience by showing you understand their challenges.
+                        </p>
+                        <!-- REPLACE: Update skills/technologies badges -->
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <div class="badge badge-primary">Skill 1</div>
+                            <div class="badge badge-primary">Skill 2</div>
+                            <div class="badge badge-primary">Skill 3</div>
+                            <div class="badge badge-primary">Skill 4</div>
+                            <div class="badge badge-primary">Skill 5</div>
+                            <div class="badge badge-primary">Skill 6</div>
+                            <div class="badge badge-primary">Skill 7</div>
+                        </div>
+                        <!-- REPLACE: Add your certification badges or remove this section -->
+                        <div class="flex flex-wrap gap-4 mt-6">
+                            <a href="#" target="_blank">
+                              <div class="h-24 w-24 bg-base-200 rounded-lg flex items-center justify-center transition-transform transform hover:scale-110">
+                                <i data-lucide="award" class="w-12 h-12 text-base-content opacity-30"></i>
+                              </div>
+                            </a>
+                            <a href="#" target="_blank">
+                              <div class="h-24 w-24 bg-base-200 rounded-lg flex items-center justify-center transition-transform transform hover:scale-110">
+                                <i data-lucide="badge" class="w-12 h-12 text-base-content opacity-30"></i>
+                              </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- 5. Pricing Plans -->
+      <!-- REPLACE: Update all pricing information, features, and CTAs -->
+      <section class="py-12 md:py-24" id="packages" data-aos="fade-up">
+          <div class="container mx-auto px-4">
+              <div class="text-center max-w-2xl md:max-w-3xl mx-auto mb-8 md:mb-12">
+                  <!-- REPLACE: Update pricing section heading and description -->
+                  <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 leading-tight">Simple Pricing, Maximum Value</h2>
+                  <p class="text-sm md:text-base lg:text-lg mb-4 md:mb-6 leading-relaxed">Choose the plan that best fits your needs. No hidden fees, cancel anytime.</p>
+                  <!-- REPLACE: Update currency note if needed -->
+                  <div class="mt-3 md:mt-4 text-xs md:text-sm badge badge-outline min-h-8">All prices are in USD</div>
+              </div>
+              
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+                  <!-- Plan 1 - Most Popular -->
+                  <div class="card bg-base-100 shadow-xl relative">
+                    <!-- REPLACE: Update or remove "Most Popular" badge -->
+                    <div class="badge badge-secondary absolute -top-3 left-1/2 transform -translate-x-1/2 text-xs md:text-sm">MOST POPULAR</div>
+                    <div class="card-body p-4 md:p-6">
+                      <!-- REPLACE: Update plan name -->
+                      <h3 class="card-title text-lg md:text-xl">Starter Plan</h3>
+                      <!-- REPLACE: Update pricing (remove strikethrough if not needed) -->
+                      <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">
+                        <span class="line-through text-base-300">$199</span>
+                        <span class="ml-2">$149</span>
+                        <span class="text-xs md:text-sm font-normal">/month</span>
+                      </div>
+                      <!-- REPLACE: Update discount note or remove -->
+                      <span class="text-xs md:text-sm text-base-300 font-normal">*Limited time offer</span>
+                      <!-- REPLACE: Update or remove guarantee badge -->
+                      <div class="badge badge-accent mb-3 md:mb-4 text-xs md:text-sm">100% SATISFACTION GUARANTEE</div>
+                      <!-- REPLACE: Update plan description -->
+                      <p class="mb-4 md:mb-6 text-sm md:text-base">Perfect for individuals or small teams getting started.</p>
+                      <!-- REPLACE: Update all features list -->
+                      <ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base">
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary-content mt-0.5 flex-shrink-0"></i>
+                          <span>Feature 1 included</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary-content mt-0.5 flex-shrink-0"></i>
+                          <span>Feature 2 included</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary-content mt-0.5 flex-shrink-0"></i>
+                          <span>Feature 3 included</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary-content mt-0.5 flex-shrink-0"></i>
+                          <span>Feature 4 included</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary-content mt-0.5 flex-shrink-0"></i>
+                          <span>Feature 5 included</span>
+                        </li>
+                      </ul>
+                      <!-- REPLACE: Update CTA link -->
+                      <div class="card-actions">
+                        <a href="#cta" class="btn btn-primary text-sm md:text-base w-full">Get Started</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Plan 2 - Pro -->
+                  <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body p-4 md:p-6">
+                      <h3 class="card-title text-lg md:text-xl">Pro Plan</h3>
+                      <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">$299<span class="text-xs md:text-sm font-normal">/month</span></div>
+                      <div class="badge badge-accent mb-3 md:mb-4 text-xs md:text-sm">100% SATISFACTION GUARANTEE</div>
+                      <p class="mb-4 md:mb-6 text-sm md:text-base">For growing businesses who need more power and features.</p>
+                      <ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base">
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Everything in Starter</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Pro Feature 1</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Pro Feature 2</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Pro Feature 3</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Pro Feature 4</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Pro Feature 5</span>
+                        </li>
+                      </ul>
+                      <div class="card-actions">
+                        <a href="#cta" class="btn btn-primary mt-auto text-sm md:text-base w-full">Get Started</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Plan 3 - Enterprise -->
+                  <div class="card bg-base-100 shadow-xl">
+                    <div class="card-body p-4 md:p-6">
+                      <h3 class="card-title text-lg md:text-xl">Enterprise Plan</h3>
+                      <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">Custom <span class="text-xs md:text-sm font-normal">Pricing</span></div>
+                      <p class="mb-4 md:mb-6 text-sm md:text-base">For large organizations with custom requirements.</p>
+                      <ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base">
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Everything in Pro</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Enterprise Feature 1</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Enterprise Feature 2</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Enterprise Feature 3</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Enterprise Feature 4</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
+                          <span>Dedicated support</span>
+                        </li>
+                      </ul>
+                      <div class="card-actions">
+                        <a href="#cta" class="btn btn-primary mt-auto text-sm md:text-base w-full">Contact Sales</a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- 6. Partnership/Bonus Section (Optional) -->
+      <!-- REPLACE: Update all partnership details or remove this section if not applicable -->
+      <section class="py-20 mt-10 rounded-lg" id="partnership" data-aos="fade-up">
+          <div class="container mx-auto px-4">
+              <div class="flex flex-col lg:flex-row items-center justify-between gap-10 p-8 md:p-12 bg-base-200 rounded-lg">
+                  <div class="lg:w-3/5 text-center lg:text-left">
+                      <!-- REPLACE: Update partnership heading -->
+                      <h2 class="text-4xl font-bold mb-3">Special Partnership Offer</h2>
+                      <!-- REPLACE: Update partnership description -->
+                      <p class="text-lg mb-6">We've partnered with [Partner Name] to bring you exclusive benefits when you choose our Pro plan.</p>
+                      
+                      <div class="mb-6">
+                          <!-- REPLACE: Update benefits list -->
+                          <h4 class="font-semibold text-xl mb-3">What you get:</h4>
+                          <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+                              <span class="badge badge-lg badge-outline border-secondary text-secondary">Benefit 1</span>
+                              <span class="badge badge-lg badge-outline border-secondary text-secondary">Benefit 2</span>
+                              <span class="badge badge-lg badge-outline border-secondary text-secondary">Benefit 3</span>
+                              <span class="badge badge-lg badge-outline border-secondary text-secondary">Benefit 4</span>
+                          </div>
+                      </div>
+                      <!-- REPLACE: Update CTA link and text -->
+                      <a href="#" target="_blank" class="btn btn-secondary btn-wide">Learn More</a>
+                  </div>
+                  <div class="lg:w-2/5 flex justify-center lg:justify-center">
+                      <!-- REPLACE: Add partnership/benefit image -->
+                      <div class="rounded-lg shadow-xl max-w-sm w-full h-80 bg-base-300 flex items-center justify-center">
+                        <i data-lucide="handshake" class="w-32 h-32 text-base-content opacity-20"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- 7. Features Breakdown Section (Optional) -->
+      <!-- REPLACE: Update all content or remove this section if not needed -->
+      <section class="py-12 md:py-24 mt-10 rounded-lg">
+          <div class="container mx-auto px-4">
+              <!-- REPLACE: Update section heading -->
+              <h2 class="text-2xl md:text-3xl font-bold text-center mb-2 md:mb-4">What's Included?</h2>
+              <!-- REPLACE: Update section description -->
+              <p class="text-center mb-6 md:mb-12 max-w-xl md:max-w-2xl mx-auto text-sm md:text-base">Here's a detailed breakdown of what you can expect from our service.</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                  <!-- Do's Card -->
+                  <div class="card bg-base-100 shadow-xl h-64 md:h-96">
+                    <div class="card-body p-4 md:p-6">
+                      <h3 class="card-title text-success flex items-center text-base md:text-lg">
+                        <i data-lucide="check-circle" class="w-5 h-5 md:w-6 md:h-6 mr-2"></i>
+                        What's Included
+                      </h3>
+                      <!-- REPLACE: Update all list items -->
+                      <ul class="mt-2 md:mt-4 space-y-1 md:space-y-2 text-xs md:text-base">
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"></i>
+                          <span>Specific deliverable or feature 1</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"></i>
+                          <span>Specific deliverable or feature 2</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"></i>
+                          <span>Specific deliverable or feature 3</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"></i>
+                          <span>Specific deliverable or feature 4</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="check" class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"></i>
+                          <span>Specific deliverable or feature 5</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Don'ts Card -->
+                  <div class="card bg-base-100 shadow-xl h-64 md:h-96">
+                    <div class="card-body p-4 md:p-6">
+                      <h3 class="card-title text-error flex items-center text-base md:text-lg">
+                        <i data-lucide="alert-circle" class="w-5 h-5 md:w-6 md:h-6 mr-2"></i>
+                        Not Included
+                      </h3>
+                      <!-- REPLACE: Update all list items -->
+                      <ul class="mt-2 md:mt-4 space-y-1 md:space-y-2 text-xs md:text-base">
+                        <li class="flex items-start">
+                          <i data-lucide="x" class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"></i>
+                          <span>Out of scope item 1</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="x" class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"></i>
+                          <span>Out of scope item 2</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="x" class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"></i>
+                          <span>Out of scope item 3</span>
+                        </li>
+                        <li class="flex items-start">
+                          <i data-lucide="x" class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"></i>
+                          <span>Out of scope item 4</span>
+                        </li>
+                      </ul>
+                      <!-- REPLACE: Update help text -->
+                      <div class="mt-2 md:mt-4 bg-base-300 p-2 md:p-4 rounded-lg">
+                        <p class="text-xs md:text-sm">Have questions about what's included? Contact us and we'll help clarify.</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- 8. Testimonials -->
+      <!-- REPLACE: Update all testimonial content, images, and customer information -->
+      <section class="py-12 md:py-24 mt-10 rounded-lg" id="testimonials" data-aos="fade-up">
+          <div class="container mx-auto px-4">
+              <!-- REPLACE: Update section heading -->
+              <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">What Our Customers Say</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card bg-base-100 shadow-xl min-h-64">
+                  <div class="card-body flex flex-col justify-between">
+                    <div>
+                      <div class="flex justify-center gap-0.5 text-warning mb-4">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                      </div>
+                      <!-- REPLACE: Update testimonial text -->
+                      <p class="mb-6">Replace this with an actual customer testimonial. Include specific results and benefits they experienced.</p>
+                    </div>
+                    <div class="flex items-center mt-auto">
+                      <!-- REPLACE: Update customer photo -->
+                      <div class="avatar mr-4">
+                        <div class="w-12 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
+                      </div>
+                      <div>
+                        <!-- REPLACE: Update customer name and company -->
+                        <h4 class="font-bold">Customer Name</h4>
+                        <p class="text-sm text-gray-600">Position, Company</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="card bg-base-100 shadow-xl min-h-64">
+                  <div class="card-body flex flex-col justify-between">
+                    <div>
+                      <div class="flex justify-center gap-0.5 text-warning mb-4">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                      </div>
+                      <p class="mb-6">Another testimonial from a satisfied customer highlighting different benefits.</p>
+                    </div>
+                    <div class="flex items-center mt-auto">
+                      <div class="avatar mr-4">
+                        <div class="w-12 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 class="font-bold">Customer Name</h4>
+                        <p class="text-sm text-gray-600">Position, Company</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="card bg-base-100 shadow-xl min-h-64">
+                  <div class="card-body flex flex-col justify-between">
+                    <div>
+                      <div class="flex justify-center gap-0.5 text-warning mb-4">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                      </div>
+                      <p class="mb-6">Third testimonial emphasizing trust and results achieved.</p>
+                    </div>
+                    <div class="flex items-center mt-auto">
+                      <div class="avatar mr-4">
+                        <div class="w-12 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 class="font-bold">Customer Name</h4>
+                        <p class="text-sm text-gray-600">Position, Company</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- 9. FAQ Section -->
+      <!-- REPLACE: Update all questions and answers -->
+      <section class="py-24 mt-10 rounded-lg" id="faq" data-aos="fade-up">
+          <div class="container mx-auto px-4">
+              <div class="grid gap-4 lg:grid-cols-3 lg:gap-8">
+                  <div class="h-auto">
+                      <h2 class="text-base font-semibold leading-7 text-primary">Questions?</h2>
+                      <!-- REPLACE: Update section heading -->
+                      <p class="mt-2 text-3xl font-bold tracking-tight">Frequently Asked Questions</p>
+                      <!-- REPLACE: Update section description -->
+                      <p class="mt-6 text-lg leading-8">Everything you need to know about our service.</p>
+                  </div>
+                  <div class="h-auto lg:col-span-2 ">
+                      <div class="join join-vertical w-full bg-base-100 rounded-3xl">
+                          <!-- FAQ 1 -->
+                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="100">
+                              <input type="radio" name="my-accordion-4" checked="checked" />
+                              <!-- REPLACE: Update question -->
+                              <div class="collapse-title text-xl font-medium">What is your refund policy?</div>
+                              <div class="collapse-content">
+                                  <!-- REPLACE: Update answer -->
+                                  <p>Explain your refund policy in detail here. Be clear and transparent about terms and conditions.</p>
+                              </div>
+                          </div>
+                          <!-- FAQ 2 -->
+                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="200">
+                              <input type="radio" name="my-accordion-4" />
+                              <div class="collapse-title text-xl font-medium">How long does it take to get started?</div>
+                              <div class="collapse-content">
+                                  <p>Provide a detailed answer about your onboarding timeline and process.</p>
+                              </div>
+                          </div>
+                          <!-- FAQ 3 -->
+                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="300">
+                              <input type="radio" name="my-accordion-4" />
+                              <div class="collapse-title text-xl font-medium">Can I upgrade or downgrade my plan?</div>
+                              <div class="collapse-content">
+                                  <p>Explain the flexibility of your pricing plans and how changes work.</p>
+                              </div>
+                          </div>
+                          <!-- FAQ 4 -->
+                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="400">
+                              <input type="radio" name="my-accordion-4" />
+                              <div class="collapse-title text-xl font-medium">What technologies do you use?</div>
+                              <div class="collapse-content">
+                                  <p>List the technologies and explain why you use them.</p>
+                              </div>
+                          </div>
+                          <!-- FAQ 5 -->
+                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="500">
+                              <input type="radio" name="my-accordion-4" />
+                              <div class="collapse-title text-xl font-medium">Do you offer support?</div>
+                              <div class="collapse-content">
+                                  <p>Describe your support offering, response times, and channels.</p>
+                              </div>
+                          </div>
+                          <!-- FAQ 6 -->
+                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="600">
+                              <input type="radio" name="my-accordion-4" />
+                              <div class="collapse-title text-xl font-medium">Can I cancel anytime?</div>
+                              <div class="collapse-content">
+                                  <p>Explain your cancellation policy clearly.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- 10. Final CTA -->
+      <!-- REPLACE: Update CTA text and links -->
+      <div class="py-24 bg-primary text-primary-content mt-10 rounded-lg" id="cta" data-aos="fade-up">
+          <div class="container mx-auto px-4">
+              <div class="max-w-3xl mx-auto text-center">
+                  <!-- REPLACE: Update CTA heading -->
+                  <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+                  <!-- REPLACE: Update CTA description -->
+                  <p class="mb-8">Join hundreds of satisfied customers and start seeing results today.</p>
+                  <div class="card bg-base-100 text-neutral max-w-md mx-auto" data-aos="fade-up" data-aos-delay="100">
+                      <div class="card-body">
+                          <!-- REPLACE: Update card heading -->
+                          <h3 class="card-title text-xl text-center mb-4">Get in Touch</h3>
+                          <!-- REPLACE: Update card description -->
+                          <p class="mb-4">Schedule a free consultation to discuss how we can help you achieve your goals.</p>
+                          <!-- REPLACE: Update CTA button link -->
+                          <a href="#" class="btn btn-primary btn-block">Schedule Free Call</a>
+                          <!-- REPLACE: Update disclaimer text -->
+                          <p class="mt-4 text-sm">No commitment required for the initial consultation</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Footer -->
+      <!-- REPLACE: Update all footer information -->
+      <footer class="footer p-8 md:py-16 mt-0 rounded-lg" data-aos="fade-up">
           <aside>
-              <i data-lucide="hash" class="w-12 h-12git remote remove origin
-              "></i>
-              <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+              <!-- REPLACE: Update footer logo and company info -->
+              <div class="w-8 h-8 md:w-12 md:h-12 bg-base-300 rounded flex items-center justify-center">
+                <i data-lucide="hash" class="w-6 h-6 md:w-8 md:h-8 text-base-content opacity-50"></i>
+              </div>
+              <p><span class="font-bold">Your Business Name</span> - Your tagline since 20XX</p>
+              <!-- REPLACE: Update additional links -->
+              <div class="flex flex-wrap gap-2 md:gap-4 mt-4 md:mt-6">
+                <a href="#" class="link link-hover">Related Site 1</a>
+              </div>
+              <!-- REPLACE: Update company registration details -->
+              <p class="mt-2 md:mt-4 text-xs md:text-sm">Your Company Name<br>Registration: XXX<br>Address Line 1<br>Address Line 2</p>
           </aside>
           <nav>
-              <h6 class="footer-title">Social</h6>
+              <!-- REPLACE: Update navigation links -->
+              <h6 class="footer-title">Navigation</h6>
+              <a href="#" class="link link-hover">Home</a>
+              <a href="#about" class="link link-hover">About</a>
+              <a href="#how-it-works" class="link link-hover">How It Works</a>
+              <a href="#packages" class="link link-hover">Pricing</a>
+              <a href="#testimonials" class="link link-hover">Testimonials</a>
+              <a href="#faq" class="link link-hover">FAQ</a>
+          </nav>
+          <nav>
+            <!-- REPLACE: Add your legal pages or remove this section -->
+            <h6 class="footer-title">Legal</h6>
+            <a href="#" class="link link-hover">Terms and Conditions</a>
+            <a href="#" class="link link-hover">Privacy Policy</a>
+            <a href="#" class="link link-hover">Refund Policy</a>
+          </nav>
+          <nav>
+            <!-- REPLACE: Update with your projects/links or remove this section -->
+            <h6 class="footer-title">Other Projects</h6>
+            <a href="#" class="link link-hover">Project 1</a>
+            <a href="#" class="link link-hover">Project 2</a>
+            <a href="#" class="link link-hover">Project 3</a>
+          </nav>
+          <nav>
+              <!-- REPLACE: Update social media links -->
+              <h6 class="footer-title">Connect</h6>
               <div class="grid grid-flow-col gap-4">
-                  <a>
+                  <a href="#" target="_blank">
                       <i data-lucide="twitter" class="w-6 h-6"></i>
                   </a>
-                  <a>
-                      <i data-lucide="youtube" class="w-6 h-6"></i>
+                  <a href="#" target="_blank">
+                      <i data-lucide="linkedin" class="w-6 h-6"></i>
                   </a>
-                  <a>
-                      <i data-lucide="facebook" class="w-6 h-6"></i>
+                  <a href="#" target="_blank">
+                      <i data-lucide="github" class="w-6 h-6"></i>
                   </a>
+              </div>
+              <!-- REPLACE: Update or remove chat button -->
+              <div class="mt-4">
+                  <a class="btn btn-primary btn-sm" href="#cta">Contact Us</a>
               </div>
           </nav>
       </footer>
-      <script src="https://unpkg.com/lucide@latest"></script>
+
+      <!-- Initialize Lucide Icons -->
       <script>
         lucide.createIcons();
-      </script>
+       </script>
   </body>
 </html>
