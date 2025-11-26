@@ -1,897 +1,1701 @@
 <!DOCTYPE html>
 <!-- NOTE: The data-theme attribute controls the DaisyUI theme. The theme controller in the navbar allows users to switch themes. -->
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="emerald">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- REPLACE: Update with your SEO-friendly title -->
-      <title>Your Business Name: Your Value Proposition</title>
-      <!-- REPLACE: Update with your SEO-friendly description -->
-      <meta name="description" content="Your business description with keywords you want to rank for" />
-      <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-      <script src="https://cdn.tailwindcss.com"></script>
-      <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-      <script src="https://unpkg.com/lucide@latest"></script>
-      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <!-- OPTIONAL: Add your analytics script here -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      balitestkits | At-Home Laboratory Testing for Wellness Monitoring in Bali
+    </title>
+    <meta
+      name="description"
+      content="Professional at-home laboratory testing for wellness monitoring in Bali. Monthly subscriptions & on-demand tests for Bali Belly, STDs, Dengue, and more. Discreet, convenient, results in your app."
+    />
+    <meta
+      name="keywords"
+      content="at home laboratory testing Bali, wellness monitoring Bali, STD testing Bali, dengue test Bali, Bali belly test, lab tests Bali, home health testing Indonesia"
+    />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- OPTIONAL: Add your analytics script here -->
+
+    <!-- Custom Theme Colors -->
+    <style>
+      :root:has([data-theme="emerald"]),
+      [data-theme="emerald"] {
+        --p: 81.5% 0.13 174; /* #5de3c7 in oklch format */
+        --pf: 71.5% 0.13 174; /* Primary focus (darker) */
+        --pc: 20% 0.01 174; /* Primary content (dark text) */
+      }
+    </style>
+
+    <!-- GetWaitlist Widget -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css"
+    />
+    <script src="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.js"></script>
   </head>
-  
+
   <body onload="AOS.init();" class="bg-base-100">
-      <!-- Navbar -->
-      <!-- REPLACE: Update navigation links to match your sections -->
-      <nav class="navbar bg-base-100 fixed top-0 left-0 right-0 z-50 p-6 shadow-sm" data-aos="fade-down">
-          <div class="container mx-auto flex justify-between items-center px-4">
-              <div class="flex items-center">
-                  <!-- REPLACE: Update logo path and alt text -->
-                  <a href="/" class="btn btn-ghost text-xl ml-2">
-                    <img src="images/logo.png" alt="Your Logo" class="w-16">
-                  </a>
-          </div>
-              <div class="flex-none hidden lg:flex items-center gap-2">
-              <ul class="menu menu-horizontal px-1">
-                      <!-- REPLACE: Update menu items with your own sections -->
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#how-it-works">How It Works</a></li>
-                      <li><a href="#packages">Pricing</a></li>
-                  <li><a href="#testimonials">Testimonials</a></li>
-                      <li><a href="#faq">FAQ</a></li>
-              </ul>
-                  
-                  <!-- OPTIONAL: Theme Controller Dropdown - Remove this section if you don't want theme switching -->
-                  <!-- Learn more: https://daisyui.com/components/theme-controller/ -->
-                  <div class="dropdown dropdown-end">
-                      <div tabindex="0" role="button" class="btn btn-sm btn-ghost">
-                          <i data-lucide="palette" class="h-5 w-5"></i>
-                          <span class="hidden md:inline">Theme</span>
-                          <i data-lucide="chevron-down" class="h-3 w-3"></i>
-                      </div>
-                      <ul tabindex="-1" class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl mt-4">
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Light"
-                                  value="light"
-                                  checked />
-                          </li>
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Dark"
-                                  value="dark" />
-                          </li>
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Cupcake"
-                                  value="cupcake" />
-                          </li>
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Retro"
-                                  value="retro" />
-                          </li>
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Cyberpunk"
-                                  value="cyberpunk" />
-                          </li>
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Valentine"
-                                  value="valentine" />
-                          </li>
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Aqua"
-                                  value="aqua" />
-                          </li>
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Lofi"
-                                  value="lofi" />
-                          </li>
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Pastel"
-                                  value="pastel" />
-                          </li>
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Fantasy"
-                                  value="fantasy" />
-                          </li>
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Dracula"
-                                  value="dracula" />
-                          </li>
-                          <li>
-                              <input
-                                  type="radio"
-                                  name="theme-dropdown"
-                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                  aria-label="Business"
-                                  value="business" />
-                          </li>
-                      </ul>
-                  </div>
-                  <!-- End Theme Controller -->
-                  
-                  <!-- REPLACE: Update with your booking/contact link -->
-                  <a href="#cta" class="btn btn-primary btn-sm ml-2">Get Started</a>
-              </div>
-          </div>
-      </nav>
+    <!-- Navbar -->
+    <!-- REPLACE: Update navigation links to match your sections -->
+    <nav
+      class="navbar bg-base-100 fixed top-0 left-0 right-0 z-50 p-6 shadow-sm"
+      data-aos="fade-down"
+    >
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="flex items-center">
+          <a href="/" class="btn btn-ghost text-xl ml-2">
+            <img
+              src="images/logo.png"
+              alt="balitestkits Logo"
+              class="w-[250px] m-[-60px]"
+            />
+          </a>
+        </div>
 
-      <!-- 1. Hero Section -->
-      <!-- REPLACE: Update all text, badge, and hero image -->
-      <section class="hero min-h-screen pt-16 pb-16" data-aos="fade-up">
-          <div class="container mx-auto flex flex-col lg:flex-row-reverse items-center px-4">
-              <!-- REPLACE: Add your hero image (replace with your own image path) -->
-              <div class="max-w-xl w-full rounded-xl mb-4 sm:mb-0 bg-base-200 h-96 flex items-center justify-center">
-                <i data-lucide="image" class="w-32 h-32 text-base-content opacity-20"></i>
-              </div>
-              <div class="text-center lg:text-left lg:mr-8">
-                  <!-- REPLACE: Update badge text or remove if not needed -->
-                  <div class="badge badge-outline mb-4 border-secondary text-secondary">UPDATE: Limited spots available!</div>
-                  <!-- REPLACE: Update with your main headline -->
-                  <h1 class="text-5xl font-bold">Your Compelling Headline That Shows Value</h1>
-                  <!-- REPLACE: Update with your value proposition -->
-                  <p class="py-6">Explain how you help your customers and what makes your solution unique. Focus on benefits, not features.</p>
-                  <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                      <!-- REPLACE: Update CTA button links and text -->
-                      <a href="#packages" class="btn btn-primary">View Pricing</a>
-                      <a href="#cta" class="btn btn-outline">Get Started</a>
-      </div>
-                  <!-- Social Proof Section -->
-                  <div class="mt-6">
-                      <!-- REPLACE: Update social proof text -->
-                      <p class="text-sm text-gray-600">Trusted by [your target audience]</p>
-                      <div class="flex mt-2 justify-center lg:justify-start">
-                          <!-- REPLACE: Add customer profile images or remove this section -->
-                          <div class="avatar-group -space-x-4">
-                          <div class="avatar">
-                                  <div class="w-8">
-                                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Customer 1" />
-                              </div>
-                          </div>
-                          <div class="avatar">
-                                  <div class="w-8">
-                                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Customer 2" />
-                              </div>
-                          </div>
-                          <div class="avatar">
-                                  <div class="w-8">
-                                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Customer 3" />
-                          </div>
-                              </div>
-                          </div>
-                          <!-- REPLACE: Update with your metrics -->
-                          <span class="ml-3 text-gray-600 flex items-center">50+ happy customers</span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
+        <!-- Mobile Menu Toggle -->
+        <div class="flex-none lg:hidden">
+          <label for="mobile-drawer" class="btn btn-ghost btn-circle">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </label>
+        </div>
 
-      <!-- 2. Types of Products/Services Section -->
-      <!-- REPLACE: Update section title and all product/service cards -->
-      <section class="py-24" id="types-of-apps" data-aos="fade-up">
-          <div class="container mx-auto px-4">
-              <!-- REPLACE: Update section heading -->
-              <h2 class="text-3xl font-bold text-center mb-12">What Can We Build Together?</h2>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <!-- REPLACE: Each card - update logo, title, description, and links -->
-                  <!-- Card 1 -->
-                  <div class="card bg-base-100 shadow-xl min-h-64">
-                    <div class="card-body flex flex-col justify-end items-start p-8">
-                      <!-- REPLACE: Add your product logo or icon -->
-                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
-                        <i data-lucide="package" class="w-12 h-12 text-base-content opacity-30"></i>
-                      </div>
-                      <!-- REPLACE: Update title and description -->
-                      <h3 class="card-title text-xl mb-2">Service Type 1</h3>
-                      <p class="text-base-content text-base">Brief description of your first service or product type.</p>
-          </div>
-      </div>
-                  <!-- Card 2 -->
-                  <div class="card bg-base-100 shadow-xl  min-h-64">
-                    <div class="card-body flex flex-col justify-end items-start p-8">
-                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
-                        <i data-lucide="box" class="w-12 h-12 text-base-content opacity-30"></i>
-          </div>
-                      <h3 class="card-title text-xl mb-2">Service Type 2</h3>
-                      <p class="text-base-content text-base">Brief description of your second service or product type.</p>
-          </div>
-      </div>
-                  <!-- Card 3 -->
-                  <div class="card bg-base-100 shadow-xl  min-h-64">
-                    <div class="card-body flex flex-col justify-end items-start p-8">
-                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
-                        <i data-lucide="layers" class="w-12 h-12 text-base-content opacity-30"></i>
-                      </div>
-                      <h3 class="card-title text-xl mb-2">Service Type 3</h3>
-                      <p class="text-base-content text-base">Brief description of your third service or product type.</p>
-                      </div>
-                  </div>
-                  <!-- Card 4 -->
-                  <div class="card bg-base-100 shadow-xl  min-h-64">
-                    <div class="card-body flex flex-col justify-end items-start p-8">
-                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
-                        <i data-lucide="grid" class="w-12 h-12 text-base-content opacity-30"></i>
-                      </div>
-                      <h3 class="card-title text-xl mb-2">Service Type 4</h3>
-                      <p class="text-base-content text-base">Brief description of your fourth service or product type.</p>
-                      </div>
-                  </div>
-                  <!-- Card 5 -->
-                  <div class="card bg-base-100 shadow-xl  min-h-64">
-                    <div class="card-body flex flex-col justify-end items-start p-8">
-                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
-                        <i data-lucide="star" class="w-12 h-12 text-base-content opacity-30"></i>
-                      </div>
-                      <h3 class="card-title text-xl mb-2">Service Type 5</h3>
-                      <p class="text-base-content text-base">Brief description of your fifth service or product type.</p>
-                      </div>
-                  </div>
-                  <!-- Card 6 -->
-                  <div class="card bg-base-100 shadow-xl  min-h-64">
-                    <div class="card-body flex flex-col justify-end items-start p-8">
-                      <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
-                        <i data-lucide="zap" class="w-12 h-12 text-base-content opacity-30"></i>
-                      </div>
-                      <h3 class="card-title text-xl mb-2">Service Type 6</h3>
-                      <p class="text-base-content text-base">Brief description of your sixth service or product type.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
+        <!-- Desktop Menu -->
+        <div class="flex-none hidden lg:flex items-center gap-2">
+          <ul class="menu menu-horizontal px-1">
+            <li><a href="#tests">Tests</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#packages">Plans</a></li>
+            <li><a href="#app">App</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+          <!-- End Theme Controller -->
 
-      <!-- 3. How It Works Section -->
-      <!-- REPLACE: Update all steps, images, and descriptions -->
-      <section class="py-24" id="how-it-works" data-aos="fade-up">
-          <div class="container mx-auto px-4">
-              <!-- REPLACE: Update section heading -->
-              <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                  <!-- Step 1 -->
-                  <div>
-                    <div class="card-body flex flex-col items-center">
-                      <div class="text-primary text-2xl font-bold mb-2">Step 1</div>
-                      <!-- REPLACE: Update step title -->
-                      <div class="font-semibold text-xl mb-4">First Step Title</div>
-                      <!-- REPLACE: Add illustration or image for step 1 -->
-                      <div class="mx-auto mb-6 w-64 h-64 bg-base-200 rounded-lg flex items-center justify-center">
-                        <i data-lucide="lightbulb" class="w-24 h-24 text-primary opacity-30"></i>
-                      </div>
-                      <!-- REPLACE: Update step description -->
-                      <p class="text-base-content">Describe what happens in the first step of your process.</p>
-                    </div>
-                  </div>
-                  <!-- Step 2 -->
-                  <div>
-                    <div class="card-body flex flex-col items-center">
-                      <div class="text-primary text-2xl font-bold mb-2">Step 2</div>
-                      <div class="font-semibold text-xl mb-4">Second Step Title</div>
-                      <div class="mx-auto mb-6 w-64 h-64 bg-base-200 rounded-lg flex items-center justify-center">
-                        <i data-lucide="settings" class="w-24 h-24 text-primary opacity-30"></i>
-                      </div>
-                      <p class="text-base-content">Describe what happens in the second step of your process.</p>
-                    </div>
-                  </div>
-                  <!-- Step 3 -->
-                  <div>
-                    <div class="card-body flex flex-col items-center">
-                      <div class="text-primary text-2xl font-bold mb-2">Step 3</div>
-                      <div class="font-semibold text-xl mb-4">Third Step Title</div>
-                      <div class="mx-auto mb-6 w-64 h-64 bg-base-200 rounded-lg flex items-center justify-center">
-                        <i data-lucide="rocket" class="w-24 h-24 text-primary opacity-30"></i>
-                      </div>
-                      <p class="text-base-content">Describe what happens in the third step of your process.</p>
-              </div>
-              </div>
-          </div>
+          <a href="#cta" class="btn btn-primary btn-sm ml-2">Join Waitlist</a>
+        </div>
       </div>
-      </section>
+    </nav>
 
-      <!-- 4. About Section -->
-      <!-- REPLACE: Update all personal/company information, photo, and skills -->
-      <section class="py-24 mt-10" id="about" data-aos="fade-up">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-10">
-                <div class="lg:w-1/3 flex justify-center">
-                    <!-- REPLACE: Add your profile photo -->
-                    <div class="w-64 h-64 flex overflow-hidden">
-                        <figure class="rounded-lg shadow-lg overflow-hidden bg-base-200 flex items-center justify-center w-full h-full">
-                          <i data-lucide="user-circle" class="w-32 h-32 text-base-content opacity-20"></i>
-                        </figure>
-            </div>
-                </div>
-                <div class="lg:w-2/3">
-                    <!-- REPLACE: Update section heading -->
-                    <h2 class="text-3xl font-bold mb-6">Meet Your [Role/Team]</h2>
-                    <div class="prose max-w-none">
-                        <!-- REPLACE: Update all paragraph content with your story -->
-                        <p class="mb-4">
-                            Introduce yourself or your team. Share your background and experience.
-                        </p>
-                        <p class="mb-4">
-                            Explain your expertise and what makes you uniquely qualified to help your customers.
-                        </p>
-                        <p class="mb-4">
-                            Connect with your target audience by showing you understand their challenges.
-                        </p>
-                        <!-- REPLACE: Update skills/technologies badges -->
-                        <div class="flex flex-wrap gap-2 mt-6">
-                            <div class="badge badge-primary">Skill 1</div>
-                            <div class="badge badge-primary">Skill 2</div>
-                            <div class="badge badge-primary">Skill 3</div>
-                            <div class="badge badge-primary">Skill 4</div>
-                            <div class="badge badge-primary">Skill 5</div>
-                            <div class="badge badge-primary">Skill 6</div>
-                            <div class="badge badge-primary">Skill 7</div>
-                        </div>
-                        <!-- REPLACE: Add your certification badges or remove this section -->
-                        <div class="flex flex-wrap gap-4 mt-6">
-                            <a href="#" target="_blank">
-                              <div class="h-24 w-24 bg-base-200 rounded-lg flex items-center justify-center transition-transform transform hover:scale-110">
-                                <i data-lucide="award" class="w-12 h-12 text-base-content opacity-30"></i>
-                              </div>
-                            </a>
-                            <a href="#" target="_blank">
-                              <div class="h-24 w-24 bg-base-200 rounded-lg flex items-center justify-center transition-transform transform hover:scale-110">
-                                <i data-lucide="badge" class="w-12 h-12 text-base-content opacity-30"></i>
-                              </div>
-                            </a>
-              </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <!-- 1. Hero Section -->
+    <!-- REPLACE: Update all text, badge, and hero image -->
+    <section class="hero min-h-screen pt-12">
+      <div
+        class="container mx-auto flex flex-col lg:flex-row-reverse items-center px-4"
+      >
+        <!-- REPLACE: Add your hero image (replace with your own image path) -->
+        <img
+          src="images/banner.png"
+          alt="Hero Banner"
+          class="max-w-xl w-full rounded-xl mb-4 sm:mb-0 bg-base-200 h-full object-cover"
+        />
+        <div class="text-center lg:text-left lg:mr-8">
+          <h1 class="text-5xl font-bold leading-tight mb-6">
+            Your Health, Your home<br />Lab-Grade Results Delivered.
+          </h1>
+          <p class="text-lg leading-relaxed text-base-content/80 mb-8">
+            Professional at-home laboratory testing for wellness monitoring in
+            Bali. Track your health monthly or book on-demand tests—from
+            digestive health to STD screening, all without leaving home.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+          >
+            <a href="#cta" class="btn btn-primary btn-lg">Join the Waitlist</a>
+            <a href="#tests" class="btn btn-outline btn-lg">View All Tests</a>
+          </div>
+           <!-- Social Proof Section -->
+           <div class="mt-12">
+             <div class="grid grid-cols-3 gap-6">
+               <div class="text-center">
+                 <div
+                   class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-base-200 mb-3"
+                 >
+                   <i data-lucide="home" class="w-6 h-6 text-base-content/70"></i>
+                 </div>
+                 <div class="text-sm font-medium">Door-to-Door</div>
+                 <div class="text-xs text-base-content/60">Delivery</div>
+               </div>
+               <div class="text-center">
+                 <div
+                   class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-base-200 mb-3"
+                 >
+                   <i
+                     data-lucide="smartphone"
+                     class="w-6 h-6 text-base-content/70"
+                   ></i>
+                 </div>
+                 <div class="text-sm font-medium">App Access</div>
+                 <div class="text-xs text-base-content/60">24/7 Results</div>
+               </div>
+               <div class="text-center">
+                 <div
+                   class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-base-200 mb-3"
+                 >
+                   <i data-lucide="shield" class="w-6 h-6 text-base-content/70"></i>
+                 </div>
+                 <div class="text-sm font-medium">100% Private</div>
+                 <div class="text-xs text-base-content/60">Encrypted</div>
+               </div>
+             </div>
+           </div>
+        </div>
+      </div>
     </section>
 
-      <!-- 5. Pricing Plans -->
-      <!-- REPLACE: Update all pricing information, features, and CTAs -->
-      <section class="py-12 md:py-24" id="packages" data-aos="fade-up">
-          <div class="container mx-auto px-4">
-              <div class="text-center max-w-2xl md:max-w-3xl mx-auto mb-8 md:mb-12">
-                  <!-- REPLACE: Update pricing section heading and description -->
-                  <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 leading-tight">Simple Pricing, Maximum Value</h2>
-                  <p class="text-sm md:text-base lg:text-lg mb-4 md:mb-6 leading-relaxed">Choose the plan that best fits your needs. No hidden fees, cancel anytime.</p>
-                  <!-- REPLACE: Update currency note if needed -->
-                  <div class="mt-3 md:mt-4 text-xs md:text-sm badge badge-outline min-h-8">All prices are in USD</div>
-          </div>
-              
-              <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-                  <!-- Plan 1 - Most Popular -->
-                  <div class="card bg-base-100 shadow-xl relative">
-                    <!-- REPLACE: Update or remove "Most Popular" badge -->
-                    <div class="badge badge-secondary absolute -top-3 left-1/2 transform -translate-x-1/2 text-xs md:text-sm">MOST POPULAR</div>
-                    <div class="card-body p-4 md:p-6">
-                      <!-- REPLACE: Update plan name -->
-                      <h3 class="card-title text-lg md:text-xl">Starter Plan</h3>
-                      <!-- REPLACE: Update pricing (remove strikethrough if not needed) -->
-                      <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">
-                        <span class="line-through text-base-300">$199</span>
-                        <span class="ml-2">$149</span>
-                        <span class="text-xs md:text-sm font-normal">/month</span>
+    <!-- 2. Available Tests Section -->
+    <section class="py-24 bg-base-200" id="tests" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-4xl font-bold mb-4">Tests Available at Launch</h2>
+          <p class="text-lg">
+            Professional lab testing designed for Bali's unique lifestyle—from
+            health optimization and biohacking to tropical wellness and
+            emergency testing. All tests delivered to your door, results in your
+            app.
+          </p>
         </div>
-                      <!-- REPLACE: Update discount note or remove -->
-                      <span class="text-xs md:text-sm text-base-300 font-normal">*Limited time offer</span>
-                      <!-- REPLACE: Update or remove guarantee badge -->
-                      <div class="badge badge-accent mb-3 md:mb-4 text-xs md:text-sm">100% SATISFACTION GUARANTEE</div>
-                      <!-- REPLACE: Update plan description -->
-                      <p class="mb-4 md:mb-6 text-sm md:text-base">Perfect for individuals or small teams getting started.</p>
-                      <!-- REPLACE: Update all features list -->
-                      <ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base">
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary-content mt-0.5 flex-shrink-0"></i>
-                          <span>Feature 1 included</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary-content mt-0.5 flex-shrink-0"></i>
-                          <span>Feature 2 included</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary-content mt-0.5 flex-shrink-0"></i>
-                          <span>Feature 3 included</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary-content mt-0.5 flex-shrink-0"></i>
-                          <span>Feature 4 included</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary-content mt-0.5 flex-shrink-0"></i>
-                          <span>Feature 5 included</span>
-                        </li>
-                      </ul>
-                      <!-- REPLACE: Update CTA link -->
-                      <div class="card-actions">
-                        <a href="#cta" class="btn btn-primary text-sm md:text-base w-full">Get Started</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Plan 2 - Pro -->
-                  <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body p-4 md:p-6">
-                      <h3 class="card-title text-lg md:text-xl">Pro Plan</h3>
-                      <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">$299<span class="text-xs md:text-sm font-normal">/month</span></div>
-                      <div class="badge badge-accent mb-3 md:mb-4 text-xs md:text-sm">100% SATISFACTION GUARANTEE</div>
-                      <p class="mb-4 md:mb-6 text-sm md:text-base">For growing businesses who need more power and features.</p>
-                      <ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base">
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Everything in Starter</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Pro Feature 1</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Pro Feature 2</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Pro Feature 3</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Pro Feature 4</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Pro Feature 5</span>
-                        </li>
-                      </ul>
-                      <div class="card-actions">
-                        <a href="#cta" class="btn btn-primary mt-auto text-sm md:text-base w-full">Get Started</a>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <!-- Plan 3 - Enterprise -->
-                  <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body p-4 md:p-6">
-                      <h3 class="card-title text-lg md:text-xl">Enterprise Plan</h3>
-                      <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">Custom <span class="text-xs md:text-sm font-normal">Pricing</span></div>
-                      <p class="mb-4 md:mb-6 text-sm md:text-base">For large organizations with custom requirements.</p>
-                      <ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base">
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Everything in Pro</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Enterprise Feature 1</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Enterprise Feature 2</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Enterprise Feature 3</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Enterprise Feature 4</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"></i>
-                          <span>Dedicated support</span>
-                        </li>
-                      </ul>
-                      <div class="card-actions">
-                        <a href="#cta" class="btn btn-primary mt-auto text-sm md:text-base w-full">Contact Sales</a>
-                      </div>
-                    </div>
-                  </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
+        >
+          <!-- Bali Belly Test -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300"
+          >
+            <div class="card-body p-8">
+              <div
+                class="w-16 h-16 mb-4 bg-warning/10 rounded-xl flex items-center justify-center"
+              >
+                <i data-lucide="alert-circle" class="w-8 h-8 text-warning"></i>
               </div>
+              <h3 class="card-title text-2xl mb-2">Bali Belly Test</h3>
+              <div class="badge badge-warning badge-sm mb-3">Stool-Based</div>
+              <p class="text-base-content mb-4">
+                Comprehensive digestive analysis for infections, parasites, and
+                Bali Belly symptoms. Get clear guidance on next steps and
+                treatment recommendations.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Tests for common parasites & bacteria</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Easy at-home stool collection</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Treatment guidance included</span>
+                </li>
+              </ul>
+            </div>
           </div>
-      </section>
 
-      <!-- 6. Partnership/Bonus Section (Optional) -->
-      <!-- REPLACE: Update all partnership details or remove this section if not applicable -->
-      <section class="py-20 mt-10 rounded-lg" id="partnership" data-aos="fade-up">
-          <div class="container mx-auto px-4">
-              <div class="flex flex-col lg:flex-row items-center justify-between gap-10 p-8 md:p-12 bg-base-200 rounded-lg">
-                  <div class="lg:w-3/5 text-center lg:text-left">
-                      <!-- REPLACE: Update partnership heading -->
-                      <h2 class="text-4xl font-bold mb-3">Special Partnership Offer</h2>
-                      <!-- REPLACE: Update partnership description -->
-                      <p class="text-lg mb-6">We've partnered with [Partner Name] to bring you exclusive benefits when you choose our Pro plan.</p>
-                      
-                      <div class="mb-6">
-                          <!-- REPLACE: Update benefits list -->
-                          <h4 class="font-semibold text-xl mb-3">What you get:</h4>
-                          <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
-                              <span class="badge badge-lg badge-outline border-secondary text-secondary">Benefit 1</span>
-                              <span class="badge badge-lg badge-outline border-secondary text-secondary">Benefit 2</span>
-                              <span class="badge badge-lg badge-outline border-secondary text-secondary">Benefit 3</span>
-                              <span class="badge badge-lg badge-outline border-secondary text-secondary">Benefit 4</span>
-                          </div>
-                      </div>
-                      <!-- REPLACE: Update CTA link and text -->
-                      <a href="#" target="_blank" class="btn btn-secondary btn-wide">Learn More</a>
-                  </div>
-                  <div class="lg:w-2/5 flex justify-center lg:justify-center">
-                      <!-- REPLACE: Add partnership/benefit image -->
-                      <div class="rounded-lg shadow-xl max-w-sm w-full h-80 bg-base-300 flex items-center justify-center">
-                        <i data-lucide="handshake" class="w-32 h-32 text-base-content opacity-20"></i>
-                    </div>
-                  </div>
+          <!-- STD Test -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300"
+          >
+            <div class="card-body p-8">
+              <div
+                class="w-16 h-16 mb-4 bg-secondary/10 rounded-xl flex items-center justify-center"
+              >
+                <i
+                  data-lucide="shield-check"
+                  class="w-8 h-8 text-secondary"
+                ></i>
               </div>
+              <h3 class="card-title text-2xl mb-2">STD Test</h3>
+              <div class="badge badge-secondary badge-sm mb-3">
+                100% Discreet
+              </div>
+              <p class="text-base-content mb-4">
+                Confidential screening for common sexually transmitted
+                infections. Fast turnaround, private results, and connection to
+                treatment if needed.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Tests for chlamydia, gonorrhea, HIV & more</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Complete privacy & anonymity</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Fast 24-48hr results</span>
+                </li>
+              </ul>
+            </div>
           </div>
-      </section>
 
-      <!-- 7. Features Breakdown Section (Optional) -->
-      <!-- REPLACE: Update all content or remove this section if not needed -->
-      <section class="py-12 md:py-24 mt-10 rounded-lg">
-          <div class="container mx-auto px-4">
-              <!-- REPLACE: Update section heading -->
-              <h2 class="text-2xl md:text-3xl font-bold text-center mb-2 md:mb-4">What's Included?</h2>
-              <!-- REPLACE: Update section description -->
-              <p class="text-center mb-6 md:mb-12 max-w-xl md:max-w-2xl mx-auto text-sm md:text-base">Here's a detailed breakdown of what you can expect from our service.</p>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-                  <!-- Do's Card -->
-                  <div class="card bg-base-100 shadow-xl h-64 md:h-96">
-                    <div class="card-body p-4 md:p-6">
-                      <h3 class="card-title text-success flex items-center text-base md:text-lg">
-                        <i data-lucide="check-circle" class="w-5 h-5 md:w-6 md:h-6 mr-2"></i>
-                        What's Included
-                      </h3>
-                      <!-- REPLACE: Update all list items -->
-                      <ul class="mt-2 md:mt-4 space-y-1 md:space-y-2 text-xs md:text-base">
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"></i>
-                          <span>Specific deliverable or feature 1</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"></i>
-                          <span>Specific deliverable or feature 2</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"></i>
-                          <span>Specific deliverable or feature 3</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"></i>
-                          <span>Specific deliverable or feature 4</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="check" class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"></i>
-                          <span>Specific deliverable or feature 5</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!-- Don'ts Card -->
-                  <div class="card bg-base-100 shadow-xl h-64 md:h-96">
-                    <div class="card-body p-4 md:p-6">
-                      <h3 class="card-title text-error flex items-center text-base md:text-lg">
-                        <i data-lucide="alert-circle" class="w-5 h-5 md:w-6 md:h-6 mr-2"></i>
-                        Not Included
-                      </h3>
-                      <!-- REPLACE: Update all list items -->
-                      <ul class="mt-2 md:mt-4 space-y-1 md:space-y-2 text-xs md:text-base">
-                        <li class="flex items-start">
-                          <i data-lucide="x" class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"></i>
-                          <span>Out of scope item 1</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="x" class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"></i>
-                          <span>Out of scope item 2</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="x" class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"></i>
-                          <span>Out of scope item 3</span>
-                        </li>
-                        <li class="flex items-start">
-                          <i data-lucide="x" class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"></i>
-                          <span>Out of scope item 4</span>
-                        </li>
-                      </ul>
-                      <!-- REPLACE: Update help text -->
-                      <div class="mt-2 md:mt-4 bg-base-300 p-2 md:p-4 rounded-lg">
-                        <p class="text-xs md:text-sm">Have questions about what's included? Contact us and we'll help clarify.</p>
-                      </div>
-                    </div>
-                  </div>
+          <!-- Dengue Test -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300"
+          >
+            <div class="card-body p-8">
+              <div
+                class="w-16 h-16 mb-4 bg-error/10 rounded-xl flex items-center justify-center"
+              >
+                <i data-lucide="thermometer" class="w-8 h-8 text-error"></i>
               </div>
+              <h3 class="card-title text-2xl mb-2">Dengue Test</h3>
+              <div class="badge badge-error badge-sm mb-3">Blood Sample</div>
+              <p class="text-base-content mb-4">
+                Rapid testing for dengue fever when you're experiencing
+                symptoms. Clear recommendations on whether you need to seek
+                immediate in-person medical care.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Simple finger-prick blood test</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Quick results for peace of mind</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Clear next-step guidance</span>
+                </li>
+              </ul>
+            </div>
           </div>
-      </section>
 
-      <!-- 8. Testimonials -->
-      <!-- REPLACE: Update all testimonial content, images, and customer information -->
-      <section class="py-12 md:py-24 mt-10 rounded-lg" id="testimonials" data-aos="fade-up">
-          <div class="container mx-auto px-4">
-              <!-- REPLACE: Update section heading -->
-              <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">What Our Customers Say</h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-                <!-- Testimonial 1 -->
-                <div class="card bg-base-100 shadow-xl min-h-64">
-                  <div class="card-body flex flex-col justify-between">
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-warning mb-4">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-                      <!-- REPLACE: Update testimonial text -->
-                      <p class="mb-6">Replace this with an actual customer testimonial. Include specific results and benefits they experienced.</p>
-                    </div>
-                    <div class="flex items-center mt-auto">
-                      <!-- REPLACE: Update customer photo -->
-                      <div class="avatar mr-4">
-                        <div class="w-12 rounded-full">
-                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                        </div>
-                      </div>
-                      <div>
-                        <!-- REPLACE: Update customer name and company -->
-                        <h4 class="font-bold">Customer Name</h4>
-                        <p class="text-sm text-gray-600">Position, Company</p>
-                      </div>
-                    </div>
-                  </div>
+          <!-- Urine & Feces Health Scan -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300"
+          >
+            <div class="card-body p-8">
+              <div
+                class="w-16 h-16 mb-4 bg-info/10 rounded-xl flex items-center justify-center"
+              >
+                <i data-lucide="activity" class="w-8 h-8 text-info"></i>
               </div>
-                <!-- Testimonial 2 -->
-                <div class="card bg-base-100 shadow-xl min-h-64">
-                  <div class="card-body flex flex-col justify-between">
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-warning mb-4">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-                      <p class="mb-6">Another testimonial from a satisfied customer highlighting different benefits.</p>
-                    </div>
-                    <div class="flex items-center mt-auto">
-                      <div class="avatar mr-4">
-                        <div class="w-12 rounded-full">
-                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                        </div>
-                      </div>
-                      <div>
-                        <h4 class="font-bold">Customer Name</h4>
-                        <p class="text-sm text-gray-600">Position, Company</p>
-                      </div>
-                    </div>
-                  </div>
+              <h3 class="card-title text-2xl mb-2">
+                Urine & Feces Health Scan
+              </h3>
+              <div class="badge badge-info badge-sm mb-3">
+                Complete Wellness Check
               </div>
-                <!-- Testimonial 3 -->
-                <div class="card bg-base-100 shadow-xl min-h-64">
-                  <div class="card-body flex flex-col justify-between">
-                    <div>
-                      <div class="flex justify-center gap-0.5 text-warning mb-4">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                      </div>
-                      <p class="mb-6">Third testimonial emphasizing trust and results achieved.</p>
-                    </div>
-                    <div class="flex items-center mt-auto">
-                      <div class="avatar mr-4">
-                        <div class="w-12 rounded-full">
-                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                  </div>
+              <p class="text-base-content mb-4">
+                Affordable general health screening for UTIs, kidney stress,
+                parasites, and gut health. Perfect for routine wellness
+                monitoring.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Screens for UTI & kidney issues</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Checks for parasites & gut health</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Great for routine checkups</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Comprehensive Blood Panel -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300"
+          >
+            <div class="card-body p-8">
+              <div
+                class="w-16 h-16 mb-4 bg-primary/10 rounded-xl flex items-center justify-center"
+              >
+                <i data-lucide="droplet" class="w-8 h-8 text-primary"></i>
               </div>
-                    <div>
-                        <h4 class="font-bold">Customer Name</h4>
-                        <p class="text-sm text-gray-600">Position, Company</p>
-                      </div>
-                    </div>
-                  </div>
+              <h3 class="card-title text-2xl mb-2">
+                Comprehensive Blood Panel
+              </h3>
+              <div class="badge badge-primary badge-sm mb-3">
+                Biohacking Essential
+              </div>
+              <p class="text-base-content mb-4">
+                Complete blood analysis covering hormones, vitamins,
+                inflammation markers, and metabolic health. Track and optimize
+                your biomarkers for peak performance.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Hormones: Testosterone, cortisol, thyroid</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Vitamins: D, B12, folate & more</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Metabolic health & inflammation markers</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Performance & Recovery Panel -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300"
+          >
+            <div class="card-body p-8">
+              <div
+                class="w-16 h-16 mb-4 bg-success/10 rounded-xl flex items-center justify-center"
+              >
+                <i data-lucide="zap" class="w-8 h-8 text-success"></i>
+              </div>
+              <h3 class="card-title text-2xl mb-2">Performance & Recovery</h3>
+              <div class="badge badge-success badge-sm mb-3">
+                Athletic Optimization
+              </div>
+              <p class="text-base-content mb-4">
+                Designed for athletes and active lifestyles. Monitor energy
+                levels, recovery markers, and performance indicators to optimize
+                your training and wellness.
+              </p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Energy & metabolism markers</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Muscle recovery & inflammation</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 mr-2 text-success mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Electrolytes & hydration status</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional offerings banner -->
+        <div class="mt-16 text-center">
+          <div
+            class="card bg-base-200 border border-base-300 max-w-3xl mx-auto"
+          >
+            <div class="card-body">
+              <div class="flex items-center justify-center gap-2 mb-3">
+                <i data-lucide="plus-circle" class="w-5 h-5 text-primary"></i>
+                <h4 class="text-xl font-semibold">
+                  On-Demand Wellness Services
+                </h4>
+              </div>
+              <p class="text-base text-base-content/70">
+                IV therapy, recovery sessions, and emergency testing available
+                for one-time bookings—no subscription required.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. How It Works Section -->
+    <section class="py-24 bg-base-100" id="how-it-works" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold mb-4">How It Works</h2>
+          <p class="text-lg">
+            Lab-quality testing without the clinic. We bring everything to your
+            villa, apartment, or coworking space—you just open the door.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <!-- Step 1 -->
+          <div class="relative">
+            <div class="card-body flex flex-col items-center">
+              <div class="badge badge-primary badge-lg text-lg font-bold mb-4">
+                Step 1
+              </div>
+              <div class="font-bold text-2xl mb-4">Choose Your Plan</div>
+              <div
+                class="mx-auto mb-6 w-58 h-56 rounded-xl flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="images/step1.png"
+                  alt="Choose Your Plan"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <p class="text-base-content text-base leading-relaxed">
+                Subscribe for monthly wellness monitoring, or book a one-time
+                test when you need it. Flexible plans for every lifestyle.
+              </p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="relative">
+            <div class="card-body flex flex-col items-center">
+              <div
+                class="badge badge-secondary badge-lg text-lg font-bold mb-4"
+              >
+                Step 2
+              </div>
+              <div class="font-bold text-2xl mb-4">We Deliver to You</div>
+              <div
+                class="mx-auto mb-6 w-58 h-56 rounded-xl flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="images/step2.png"
+                  alt="We Deliver to You"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <p class="text-base-content text-base leading-relaxed">
+                Our trained staff brings your test kit directly to your door.
+                Quick handoff, discreet packaging, clear instructions included.
+              </p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="relative">
+            <div class="card-body flex flex-col items-center">
+              <div class="badge badge-accent badge-lg text-lg font-bold mb-4">
+                Step 3
+              </div>
+              <div class="font-bold text-2xl mb-4">Track in Your App</div>
+              <div
+                class="mx-auto mb-6 w-56 h-56 rounded-xl flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="images/step3.png"
+                  alt="Track in Your App"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <p class="text-base-content text-base leading-relaxed">
+                Register your kit in the app, submit your sample, and get
+                results fast. All your wellness data in one place, tracked over
+                time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. About / Why Bali Section -->
+    <section class="py-24 bg-base-100" id="about" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2 flex justify-center">
+            <div
+              class="w-full h-96 flex overflow-hidden rounded-2xl shadow-2xl bg-base-200"
+            >
+              <figure
+                class="overflow-hidden flex items-center justify-center w-full h-full"
+              >
+                <i
+                  data-lucide="palm-tree"
+                  class="w-32 h-32 text-base-content opacity-20"
+                ></i>
+              </figure>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <h2 class="text-4xl font-bold mb-6">Built for Bali's Lifestyle</h2>
+            <div class="prose max-w-none">
+              <p class="mb-4 text-lg leading-relaxed">
+                Bali is paradise—but paradise has its health quirks. From surf
+                sessions and late-night beach clubs to food adventures and
+                tropical climates, island life brings unique wellness
+                challenges.
+              </p>
+              <p class="mb-4 text-lg leading-relaxed">
+                We get it. Getting to a clinic in Canggu traffic or scheduling
+                tests around your remote work can be a hassle. That's why we
+                bring professional lab testing directly to your villa,
+                apartment, or coworking space.
+              </p>
+              <p class="mb-6 text-lg leading-relaxed">
+                Whether you're a biohacker optimizing your performance, a
+                digital nomad tracking your monthly wellness, a long-term expat
+                staying proactive, or just need a quick dengue or STD check,
+                we've designed our service around
+                <strong>your</strong> life.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mt-8">
+                <div class="badge badge-outline badge-lg gap-2">
+                  <i data-lucide="activity" class="w-3 h-3"></i>
+                  Active Lifestyles
+                </div>
+                <div class="badge badge-outline badge-lg gap-2">
+                  <i data-lucide="brain" class="w-3 h-3"></i>
+                  Biohacking & Optimization
+                </div>
+                <div class="badge badge-outline badge-lg gap-2">
+                  <i data-lucide="sun" class="w-3 h-3"></i>
+                  Tropical Health
+                </div>
+                <div class="badge badge-outline badge-lg gap-2">
+                  <i data-lucide="lock" class="w-3 h-3"></i>
+                  100% Private
+                </div>
+                <div class="badge badge-outline badge-lg gap-2">
+                  <i data-lucide="laptop" class="w-3 h-3"></i>
+                  Digital Nomad Friendly
+                </div>
+                <div class="badge badge-outline badge-lg gap-2">
+                  <i data-lucide="trending-up" class="w-3 h-3"></i>
+                  Track Over Time
+                </div>
+              </div>
+
+              <div
+                class="mt-8 p-6 bg-base-200 border border-base-300 rounded-lg"
+              >
+                <div class="flex items-center gap-2 mb-2">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-5 h-5 text-primary"
+                  ></i>
+                  <p class="text-base font-semibold">
+                    Professional Lab Standards
+                  </p>
+                </div>
+                <p class="text-sm text-base-content/70">
+                  All tests processed by certified laboratories with
+                  international quality standards. Your health data is secure,
+                  encrypted, and 100% confidential.
+                </p>
               </div>
             </div>
           </div>
-      </section>
-
-      <!-- 9. FAQ Section -->
-      <!-- REPLACE: Update all questions and answers -->
-      <section class="py-24 mt-10 rounded-lg" id="faq" data-aos="fade-up">
-          <div class="container mx-auto px-4">
-        <div class="grid gap-4 lg:grid-cols-3 lg:gap-8">
-        <div class="h-auto">
-                      <h2 class="text-base font-semibold leading-7 text-primary">Questions?</h2>
-                      <!-- REPLACE: Update section heading -->
-                      <p class="mt-2 text-3xl font-bold tracking-tight">Frequently Asked Questions</p>
-                      <!-- REPLACE: Update section description -->
-                      <p class="mt-6 text-lg leading-8">Everything you need to know about our service.</p>
         </div>
-                  <div class="h-auto lg:col-span-2 ">
-                      <div class="join join-vertical w-full bg-base-100 rounded-3xl">
-                          <!-- FAQ 1 -->
-                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="100">
+      </div>
+    </section>
+
+    <!-- 5. Pricing Plans -->
+    <section
+      class="py-12 md:py-24 bg-base-100"
+      id="packages"
+      data-aos="fade-up"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-2xl md:max-w-3xl mx-auto mb-8 md:mb-12">
+          <h2
+            class="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 leading-tight"
+          >
+            Choose Your Plan
+          </h2>
+          <p
+            class="text-sm md:text-base lg:text-lg mb-4 md:mb-6 leading-relaxed"
+          >
+            Subscribe for ongoing wellness tracking or book on-demand when you
+            need it. Flexible, transparent, no commitments.
+          </p>
+          <div
+            class="mt-3 md:mt-4 text-xs md:text-sm badge badge-outline badge-lg gap-2"
+          >
+            <i data-lucide="sparkles" class="w-3 h-3"></i>
+            WAITLIST PRICING • LAUNCH SPECIAL
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto"
+        >
+          <!-- Plan 1 - Monthly Wellness -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 relative border-2 border-primary"
+          >
+            <div
+              class="badge badge-primary absolute -top-3 left-1/2 transform -translate-x-1/2 text-xs md:text-sm gap-2"
+            >
+              <i data-lucide="star" class="w-3 h-3"></i>
+              BEST VALUE
+            </div>
+            <div class="card-body p-4 md:p-6">
+              <h3 class="card-title text-lg md:text-xl">Monthly Wellness</h3>
+              <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">
+                <span class="line-through text-base-300 text-xl">$99</span>
+                <span class="ml-2">$79</span>
+                <span class="text-xs md:text-sm font-normal">/month</span>
+              </div>
+              <span class="text-xs md:text-sm text-base-300 font-normal"
+                >*Waitlist early bird pricing</span
+              >
+              <div class="badge badge-accent mb-3 md:mb-4 text-xs md:text-sm">
+                RECURRING DELIVERY
+              </div>
+              <p class="mb-4 md:mb-6 text-sm md:text-base">
+                Perfect for tracking your wellness over time. A fresh test kit
+                delivered to your door every month.
+              </p>
+              <ul
+                class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base"
+              >
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Choose 1 test per month</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Staff delivers to your location</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Results & trends in app</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Wellness tracking over time</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Cancel anytime, no contract</span>
+                </li>
+              </ul>
+              <div class="card-actions">
+                <a
+                  href="#cta"
+                  class="btn btn-primary text-sm md:text-base w-full"
+                  >Join Waitlist</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan 2 - One-Time Test -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300"
+          >
+            <div class="card-body p-4 md:p-6">
+              <h3 class="card-title text-lg md:text-xl">One-Time Test</h3>
+              <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">
+                From $49<span class="text-xs md:text-sm font-normal">
+                  per test</span
+                >
+              </div>
+              <div
+                class="badge badge-secondary mb-3 md:mb-4 text-xs md:text-sm"
+              >
+                ON-DEMAND
+              </div>
+              <p class="mb-4 md:mb-6 text-sm md:text-base">
+                Book individual tests when you need them. No subscription
+                required—just schedule and we'll deliver.
+              </p>
+              <ul
+                class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base"
+              >
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Any test, anytime you need it</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Same-day or next-day delivery</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Fast turnaround on results</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>View results in app</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>No commitment or subscription</span>
+                </li>
+              </ul>
+              <div class="card-actions">
+                <a
+                  href="#cta"
+                  class="btn btn-outline btn-primary mt-auto text-sm md:text-base w-full"
+                  >Join Waitlist</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan 3 - Wellness Services -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300"
+          >
+            <div class="card-body p-4 md:p-6">
+              <h3 class="card-title text-lg md:text-xl">Wellness Services</h3>
+              <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">
+                Custom
+                <span class="text-xs md:text-sm font-normal">pricing</span>
+              </div>
+              <div class="badge badge-info mb-3 md:mb-4 text-xs md:text-sm">
+                IV DRIPS • RECOVERY
+              </div>
+              <p class="mb-4 md:mb-6 text-sm md:text-base">
+                On-demand wellness sessions for recovery, hydration, and
+                emergency care—delivered to you.
+              </p>
+              <ul
+                class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base"
+              >
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>IV hydration & vitamin therapy</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Post-surf/sport recovery sessions</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Emergency STD testing & care</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>Same-day availability</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 md:w-5 md:h-5 mr-2 text-primary mt-0.5 flex-shrink-0"
+                  ></i>
+                  <span>100% private & discreet</span>
+                </li>
+              </ul>
+              <div class="card-actions">
+                <a
+                  href="#cta"
+                  class="btn btn-outline btn-primary mt-auto text-sm md:text-base w-full"
+                  >Join Waitlist</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. App Section -->
+    <section class="py-20 bg-base-200" id="app" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center justify-between gap-12 max-w-6xl mx-auto"
+        >
+          <div class="lg:w-1/2 text-center lg:text-left">
+            <div class="badge badge-primary mb-4">COMING SOON</div>
+            <h2 class="text-4xl font-bold mb-4">
+              Your Health Data,<br />One Powerful App
+            </h2>
+            <p class="text-lg mb-6 leading-relaxed">
+              Track every test, view results over time, and monitor trends—all
+              from your phone. The balitestkits app puts your wellness history
+              in your pocket.
+            </p>
+
+            <div class="mb-8 space-y-4">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0"
+                >
+                  <i
+                    data-lucide="clipboard-list"
+                    class="w-6 h-6 text-primary"
+                  ></i>
+                </div>
+                <div class="text-left">
+                  <h4 class="font-bold text-lg mb-1">
+                    Register Kits Instantly
+                  </h4>
+                  <p class="text-sm">
+                    Scan your kit barcode and register in seconds. Track status
+                    from delivery to results.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center flex-shrink-0"
+                >
+                  <i
+                    data-lucide="trending-up"
+                    class="w-6 h-6 text-secondary"
+                  ></i>
+                </div>
+                <div class="text-left">
+                  <h4 class="font-bold text-lg mb-1">Track Wellness Trends</h4>
+                  <p class="text-sm">
+                    See how your health changes over time. Spot patterns,
+                    celebrate wins, and stay proactive.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0"
+                >
+                  <i data-lucide="bell" class="w-6 h-6 text-accent"></i>
+                </div>
+                <div class="text-left">
+                  <h4 class="font-bold text-lg mb-1">Get Notified Fast</h4>
+                  <p class="text-sm">
+                    Instant push notifications when your results are ready. No
+                    waiting, no wondering.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+            >
+              <div class="btn btn-disabled btn-wide">
+                <i data-lucide="smartphone" class="w-5 h-5 mr-2"></i>
+                Coming to iOS & Android
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/2 flex justify-center">
+            <!-- Placeholder for app mockup -->
+            <div class="mockup-phone border-primary">
+              <div class="camera"></div>
+              <div class="display">
+                <div
+                  class="artboard artboard-demo phone-1 bg-gradient-to-br from-base-100 to-base-200 flex items-center justify-center"
+                >
+                  <i
+                    data-lucide="smartphone"
+                    class="w-24 h-24 text-base-content opacity-20"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Features Breakdown Section -->
+    <section class="py-12 md:py-24 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-2 md:mb-4">
+          What's Included in Every Plan
+        </h2>
+        <p
+          class="text-center mb-6 md:mb-12 max-w-xl md:max-w-2xl mx-auto text-sm md:text-base"
+        >
+          Here's everything you get with balitestkits, and what we don't cover.
+        </p>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto"
+        >
+          <!-- What's Included Card -->
+          <div class="card bg-base-100 shadow-xl border-2 border-success/20">
+            <div class="card-body p-4 md:p-6">
+              <h3
+                class="card-title text-success flex items-center text-base md:text-lg mb-4"
+              >
+                <i
+                  data-lucide="check-circle"
+                  class="w-5 h-5 md:w-6 md:h-6 mr-2"
+                ></i>
+                What's Included
+              </h3>
+              <ul
+                class="mt-2 md:mt-4 space-y-2 md:space-y-3 text-xs md:text-base"
+              >
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>Direct-to-door kit delivery by trained staff</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>Professional lab processing & analysis</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>Results viewable in mobile/web app</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>Wellness tracking & trend insights</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>Clear guidance on next steps</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>100% private & encrypted data</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>Customer support via WhatsApp</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="check"
+                    class="w-5 h-5 text-success mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>Easy rescheduling & kit swaps</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Not Included Card -->
+          <div class="card bg-base-100 shadow-xl border-2 border-error/20">
+            <div class="card-body p-4 md:p-6">
+              <h3
+                class="card-title text-error flex items-center text-base md:text-lg mb-4"
+              >
+                <i
+                  data-lucide="alert-circle"
+                  class="w-5 h-5 md:w-6 md:h-6 mr-2"
+                ></i>
+                Not Included
+              </h3>
+              <ul
+                class="mt-2 md:mt-4 space-y-2 md:space-y-3 text-xs md:text-base"
+              >
+                <li class="flex items-start">
+                  <i
+                    data-lucide="x"
+                    class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>Direct medical diagnosis or treatment</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="x"
+                    class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>Prescription medications</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="x"
+                    class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>Emergency or acute care services</span>
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="x"
+                    class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span
+                    >Blood draws requiring a phlebotomist (coming soon)</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i
+                    data-lucide="x"
+                    class="w-5 h-5 text-error mt-0.5 mr-2 flex-shrink-0"
+                  ></i>
+                  <span>Health insurance coverage or reimbursement</span>
+                </li>
+              </ul>
+              <div
+                class="mt-4 md:mt-6 bg-info/10 border border-info/30 p-3 md:p-4 rounded-lg"
+              >
+                <p class="text-xs md:text-sm">
+                  <strong>Important:</strong> Our tests are for wellness
+                  monitoring and informational purposes. Always consult a
+                  licensed medical professional for diagnosis and treatment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Testimonials - HIDDEN UNTIL LAUNCH -->
+    <!-- 
+    <section
+      class="py-12 md:py-24 bg-base-100"
+      id="testimonials"
+      data-aos="fade-up"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-3">
+          Trusted by Bali's Community
+        </h2>
+        <p class="text-center mb-8 md:mb-12 text-base max-w-2xl mx-auto">
+          Hear from digital nomads, expats, and locals who've made wellness
+          monitoring part of their Bali lifestyle.
+        </p>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto"
+        >
+          <!-- Testimonial 1 -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300"
+          >
+            <div class="card-body flex flex-col justify-between p-6">
+              <div>
+                <div class="flex gap-0.5 text-warning mb-4">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="mb-6 text-sm leading-relaxed">
+                  "I got Bali Belly during my second week here and was dreading
+                  the clinic. balitestkits delivered the test kit to my villa
+                  and I had answers the next day. Total game-changer for peace
+                  of mind."
+                </p>
+              </div>
+              <div class="flex items-center mt-auto">
+                <div class="avatar placeholder mr-4">
+                  <div
+                    class="bg-primary text-primary-content w-12 rounded-full"
+                  >
+                    <span class="text-lg">SK</span>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="font-bold">Sarah K.</h4>
+                  <p class="text-sm text-base-content/70">
+                    Digital Nomad, Canggu
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300"
+          >
+            <div class="card-body flex flex-col justify-between p-6">
+              <div>
+                <div class="flex gap-0.5 text-warning mb-4">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="mb-6 text-sm leading-relaxed">
+                  "The monthly wellness plan keeps me on track without having to
+                  think about it. I love seeing my health trends in the app—it's
+                  like having a personal health dashboard."
+                </p>
+              </div>
+              <div class="flex items-center mt-auto">
+                <div class="avatar placeholder mr-4">
+                  <div
+                    class="bg-secondary text-secondary-content w-12 rounded-full"
+                  >
+                    <span class="text-lg">MR</span>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="font-bold">Marcus R.</h4>
+                  <p class="text-sm text-base-content/70">Entrepreneur, Ubud</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300"
+          >
+            <div class="card-body flex flex-col justify-between p-6">
+              <div>
+                <div class="flex gap-0.5 text-warning mb-4">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="mb-6 text-sm leading-relaxed">
+                  "Finally—discreet STD testing that doesn't involve awkward
+                  clinic visits. The privacy and convenience are exactly what I
+                  needed. Results were fast and the app made everything so
+                  easy."
+                </p>
+              </div>
+              <div class="flex items-center mt-auto">
+                <div class="avatar placeholder mr-4">
+                  <div class="bg-accent text-accent-content w-12 rounded-full">
+                    <span class="text-lg">JL</span>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="font-bold">Jade L.</h4>
+                  <p class="text-sm text-base-content/70">
+                    Yoga Instructor, Seminyak
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Badge -->
+        <div class="text-center mt-12">
+          <div class="badge badge-lg badge-outline gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+            All reviews verified • Privacy always protected
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- 9. FAQ Section -->
+    <section class="py-24 bg-base-100" id="faq" data-aos="fade-up">
+      <div class="container mx-auto px-4">
+        <div class="grid gap-8 lg:grid-cols-3 lg:gap-12 max-w-6xl mx-auto">
+          <div class="h-auto">
+            <h2 class="text-base font-semibold leading-7 text-primary">
+              Questions?
+            </h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight">
+              Common Questions
+            </p>
+            <p class="mt-6 text-lg leading-8">
+              Everything you need to know about at-home lab testing in Bali.
+            </p>
+            <div class="mt-6">
+              <a href="#cta" class="btn btn-primary btn-sm"
+                >Still have questions? Contact us</a
+              >
+            </div>
+          </div>
+          <div class="h-auto lg:col-span-2">
+            <div class="join join-vertical w-full bg-base-100">
+              <!-- FAQ 1 -->
+              <div
+                class="collapse collapse-arrow join-item border-base-300 border"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 <input type="radio" name="my-accordion-4" checked="checked" />
-                              <!-- REPLACE: Update question -->
-                              <div class="collapse-title text-xl font-medium">What is your refund policy?</div>
-                <div class="collapse-content">
-                                  <!-- REPLACE: Update answer -->
-                                  <p>Explain your refund policy in detail here. Be clear and transparent about terms and conditions.</p>
-            </div>
-            </div>
-                          <!-- FAQ 2 -->
-                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="200">
-                <input type="radio" name="my-accordion-4" />
-                              <div class="collapse-title text-xl font-medium">How long does it take to get started?</div>
-                <div class="collapse-content">
-                                  <p>Provide a detailed answer about your onboarding timeline and process.</p>
+                <div class="collapse-title text-lg font-semibold">
+                  How does delivery work in Bali?
                 </div>
-            </div>
-                          <!-- FAQ 3 -->
-                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="300">
-                <input type="radio" name="my-accordion-4" />
-                              <div class="collapse-title text-xl font-medium">Can I upgrade or downgrade my plan?</div>
                 <div class="collapse-content">
-                                  <p>Explain the flexibility of your pricing plans and how changes work.</p>
+                  <p class="leading-relaxed">
+                    Our trained staff delivers test kits directly to your villa,
+                    apartment, hotel, or coworking space across Canggu,
+                    Seminyak, Ubud, Sanur, and surrounding areas. We coordinate
+                    delivery times via WhatsApp to ensure you're home. Delivery
+                    is fast, discreet, and included in all plans.
+                  </p>
                 </div>
-            </div>
-                          <!-- FAQ 4 -->
-                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="400">
+              </div>
+
+              <!-- FAQ 2 -->
+              <div
+                class="collapse collapse-arrow join-item border-base-300 border"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <input type="radio" name="my-accordion-4" />
-                              <div class="collapse-title text-xl font-medium">What technologies do you use?</div>
-                <div class="collapse-content">
-                                  <p>List the technologies and explain why you use them.</p>
+                <div class="collapse-title text-lg font-semibold">
+                  How long do results take?
                 </div>
-            </div>
-                          <!-- FAQ 5 -->
-                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="500">
+                <div class="collapse-content">
+                  <p class="leading-relaxed">
+                    Most results are available within 24-48 hours for standard
+                    tests (STD, urine/feces scan). More comprehensive tests like
+                    Bali Belly or specialized panels may take 2-4 days. You'll
+                    receive a push notification in the app as soon as your
+                    results are ready.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+              <div
+                class="collapse collapse-arrow join-item border-base-300 border"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 <input type="radio" name="my-accordion-4" />
-                              <div class="collapse-title text-xl font-medium">Do you offer support?</div>
-                <div class="collapse-content">
-                                  <p>Describe your support offering, response times, and channels.</p>
+                <div class="collapse-title text-lg font-semibold">
+                  Is my data private and secure?
                 </div>
-            </div>
-                          <!-- FAQ 6 -->
-                          <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="600">
+                <div class="collapse-content">
+                  <p class="leading-relaxed">
+                    Absolutely. All health data is encrypted, stored securely,
+                    and never shared with third parties. We comply with
+                    international privacy standards. Your test results are only
+                    visible to you in your private app account. Discreet
+                    packaging and confidential handling are guaranteed.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div
+                class="collapse collapse-arrow join-item border-base-300 border"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <input type="radio" name="my-accordion-4" />
-                              <div class="collapse-title text-xl font-medium">Can I cancel anytime?</div>
-                <div class="collapse-content">
-                                  <p>Explain your cancellation policy clearly.</p>
+                <div class="collapse-title text-lg font-semibold">
+                  Can I cancel my subscription anytime?
                 </div>
+                <div class="collapse-content">
+                  <p class="leading-relaxed">
+                    Yes! There are no long-term contracts. You can cancel your
+                    monthly plan anytime through the app or by contacting us. If
+                    you cancel mid-month, you'll still receive that month's kit,
+                    but won't be charged again.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ 5 -->
+              <div
+                class="collapse collapse-arrow join-item border-base-300 border"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-lg font-semibold">
+                  Do you provide medical treatment or prescriptions?
+                </div>
+                <div class="collapse-content">
+                  <p class="leading-relaxed">
+                    No. balitestkits provides testing and wellness monitoring
+                    for informational purposes. We don't diagnose, treat, or
+                    prescribe medications. If your results indicate you need
+                    care, we'll provide clear guidance and can connect you with
+                    trusted local clinics or doctors in Bali.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ 6 -->
+              <div
+                class="collapse collapse-arrow join-item border-base-300 border"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-lg font-semibold">
+                  What areas of Bali do you serve?
+                </div>
+                <div class="collapse-content">
+                  <p class="leading-relaxed">
+                    We currently deliver to Canggu, Seminyak, Kerobokan, Ubud,
+                    Sanur, Denpasar, and surrounding areas. Coverage is
+                    expanding! If you're outside these zones, join the waitlist
+                    and let us know your location—we're adding new areas based
+                    on demand.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ 7 -->
+              <div
+                class="collapse collapse-arrow join-item border-base-300 border"
+                data-aos="fade-up"
+                data-aos-delay="700"
+              >
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-lg font-semibold">
+                  What if I'm only in Bali for a few months?
+                </div>
+                <div class="collapse-content">
+                  <p class="leading-relaxed">
+                    Perfect! You can subscribe for just the months you're here
+                    or book one-time tests as needed. No commitment required.
+                    Many digital nomads use our service during their Bali stays
+                    to stay on top of their health without the clinic hassle.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Final CTA / Waitlist -->
+    <div
+      class="py-24 bg-primary text-primary-content"
+      id="cta"
+      data-aos="fade-up"
+    >
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="badge badge-accent badge-lg mb-6 gap-2">
+            <i data-lucide="rocket" class="w-4 h-4"></i>
+            LAUNCHING SOON IN BALI
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            Join the Waitlist
+          </h2>
+          <p class="mb-8 text-lg md:text-xl opacity-90">
+            Be the first to access at-home lab testing in Bali. Waitlist members
+            get early bird pricing, priority delivery zones, and exclusive
+            launch perks.
+          </p>
+
+          <div
+            class="card bg-base-100 text-neutral max-w-lg mx-auto shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="card-body p-8">
+              <h3 class="card-title text-2xl text-center mb-6 justify-center">
+                Reserve Your Spot
+              </h3>
+
+              <!-- GetWaitlist Embed -->
+              <div
+                id="getWaitlistContainer"
+                data-waitlist_id="32016"
+                data-widget_type="WIDGET_1"
+              ></div>
+
+              <div
+                class="mt-6 p-4 bg-success/10 border border-success/30 rounded-lg"
+              >
+                <p class="text-sm flex items-start gap-2">
+                  <i
+                    data-lucide="gift"
+                    class="w-5 h-5 text-success flex-shrink-0"
+                  ></i>
+                  <span
+                    ><strong>Early Bird Bonus:</strong> First 100 members get
+                    20% off for life + free delivery for 6 months!</span
+                  >
+                </p>
+              </div>
+
+              <p class="mt-4 text-xs text-base-content/60">
+                By joining, you agree to receive launch updates via email.
+                Unsubscribe anytime. We respect your privacy.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="mt-12 flex flex-wrap justify-center gap-8 text-sm opacity-80"
+          >
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-5 h-5"></i>
+              <span>No payment required</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-5 h-5"></i>
+              <span>Early bird pricing</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-5 h-5"></i>
+              <span>Priority access</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-      </section>
 
-      <!-- 10. Final CTA -->
-      <!-- REPLACE: Update CTA text and links -->
-      <div class="py-24 bg-primary text-primary-content mt-10 rounded-lg" id="cta" data-aos="fade-up">
-          <div class="container mx-auto px-4">
-              <div class="max-w-3xl mx-auto text-center">
-                  <!-- REPLACE: Update CTA heading -->
-                  <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-                  <!-- REPLACE: Update CTA description -->
-                  <p class="mb-8">Join hundreds of satisfied customers and start seeing results today.</p>
-                  <div class="card bg-base-100 text-neutral max-w-md mx-auto" data-aos="fade-up" data-aos-delay="100">
-                      <div class="card-body">
-                          <!-- REPLACE: Update card heading -->
-                          <h3 class="card-title text-xl text-center mb-4">Get in Touch</h3>
-                          <!-- REPLACE: Update card description -->
-                          <p class="mb-4">Schedule a free consultation to discuss how we can help you achieve your goals.</p>
-                          <!-- REPLACE: Update CTA button link -->
-                          <a href="#" class="btn btn-primary btn-block">Schedule Free Call</a>
-                          <!-- REPLACE: Update disclaimer text -->
-                          <p class="mt-4 text-sm">No commitment required for the initial consultation</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
+    <!-- Footer -->
+    <footer class="footer p-8 md:py-16 bg-base-200" data-aos="fade-up">
+      <aside>
+        <div
+          class="w-8 h-8 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center"
+        >
+          <i
+            data-lucide="heart-pulse"
+            class="w-6 h-6 md:w-8 md:h-8 text-primary-content"
+          ></i>
+        </div>
+        <p class="max-w-xs">
+          <span class="font-bold text-lg">balitestkits</span><br />Professional
+          at-home laboratory testing for wellness monitoring in Bali
+        </p>
+        <div class="mt-4 text-xs md:text-sm opacity-70 flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-3 h-3"></i>
+          <span>Based in Bali, Indonesia • Launching Soon</span>
+        </div>
+      </aside>
+      <nav>
+        <h6 class="footer-title">Quick Links</h6>
+        <a href="#tests" class="link link-hover">Available Tests</a>
+        <a href="#how-it-works" class="link link-hover">How It Works</a>
+        <a href="#packages" class="link link-hover">Plans & Pricing</a>
+        <a href="#app" class="link link-hover">Mobile App</a>
+        <!-- <a href="#testimonials" class="link link-hover">Testimonials</a> -->
+        <a href="#faq" class="link link-hover">FAQ</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a href="#" class="link link-hover">Terms & Conditions</a>
+        <a href="#" class="link link-hover">Privacy Policy</a>
+        <a href="#" class="link link-hover">Medical Disclaimer</a>
+        <a href="#" class="link link-hover">Refund Policy</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Services</h6>
+        <a href="#tests" class="link link-hover">Bali Belly Test</a>
+        <a href="#tests" class="link link-hover">STD Testing</a>
+        <a href="#tests" class="link link-hover">Dengue Test</a>
+        <a href="#tests" class="link link-hover">Wellness Services</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Connect</h6>
+        <div class="grid grid-flow-col gap-4">
+          <a href="#" target="_blank" aria-label="Instagram">
+            <i
+              data-lucide="instagram"
+              class="w-6 h-6 hover:text-primary transition-colors"
+            ></i>
+          </a>
+          <a href="#" target="_blank" aria-label="Facebook">
+            <i
+              data-lucide="facebook"
+              class="w-6 h-6 hover:text-primary transition-colors"
+            ></i>
+          </a>
+          <a href="#" target="_blank" aria-label="Mail">
+            <i
+              data-lucide="mail"
+              class="w-6 h-6 hover:text-primary transition-colors"
+            ></i>
+          </a>
+        </div>
+        <div class="mt-4">
+          <a class="btn btn-primary btn-sm" href="#cta">Join Waitlist</a>
+        </div>
+        <div class="text-xs mt-2 opacity-70 flex items-center gap-1">
+          <i data-lucide="message-circle" class="w-3 h-3"></i>
+          <span>WhatsApp Support Available</span>
+        </div>
+      </nav>
+    </footer>
+
+    <!-- Copyright -->
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+      <aside>
+        <p class="text-sm">
+          © 2025 balitestkits. All rights reserved. | Tests are for wellness
+          monitoring and informational purposes only.
+        </p>
+      </aside>
+    </footer>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="drawer drawer-end z-50">
+      <input id="mobile-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-side">
+        <label
+          for="mobile-drawer"
+          aria-label="close sidebar"
+          class="drawer-overlay"
+        ></label>
+        <ul class="menu p-4 w-80 min-h-full bg-base-100 text-base-content">
+          <li class="mb-4">
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-bold">Menu</span>
+              <label
+                for="mobile-drawer"
+                class="btn btn-ghost btn-sm btn-circle"
+              >
+                <i data-lucide="x" class="w-5 h-5"></i>
+              </label>
+            </div>
+          </li>
+          <li>
+            <a
+              href="#tests"
+              onclick="document.getElementById('mobile-drawer').checked = false"
+              >Tests</a
+            >
+          </li>
+          <li>
+            <a
+              href="#how-it-works"
+              onclick="document.getElementById('mobile-drawer').checked = false"
+              >How It Works</a
+            >
+          </li>
+          <li>
+            <a
+              href="#packages"
+              onclick="document.getElementById('mobile-drawer').checked = false"
+              >Plans</a
+            >
+          </li>
+          <li>
+            <a
+              href="#app"
+              onclick="document.getElementById('mobile-drawer').checked = false"
+              >App</a
+            >
+          </li>
+          <li>
+            <a
+              href="#faq"
+              onclick="document.getElementById('mobile-drawer').checked = false"
+              >FAQ</a
+            >
+          </li>
+          <li class="mt-4">
+            <a
+              href="#cta"
+              class="btn btn-primary"
+              onclick="document.getElementById('mobile-drawer').checked = false"
+              >Join Waitlist</a
+            >
+          </li>
+        </ul>
       </div>
+    </div>
 
-          <!-- Footer -->
-      <!-- REPLACE: Update all footer information -->
-      <footer class="footer p-8 md:py-16 mt-0 rounded-lg" data-aos="fade-up">
-          <aside>
-              <!-- REPLACE: Update footer logo and company info -->
-              <div class="w-8 h-8 md:w-12 md:h-12 bg-base-300 rounded flex items-center justify-center">
-                <i data-lucide="hash" class="w-6 h-6 md:w-8 md:h-8 text-base-content opacity-50"></i>
-              </div>
-              <p><span class="font-bold">Your Business Name</span> - Your tagline since 20XX</p>
-              <!-- REPLACE: Update additional links -->
-              <div class="flex flex-wrap gap-2 md:gap-4 mt-4 md:mt-6">
-                <a href="#" class="link link-hover">Related Site 1</a>
-              </div>
-              <!-- REPLACE: Update company registration details -->
-              <p class="mt-2 md:mt-4 text-xs md:text-sm">Your Company Name<br>Registration: XXX<br>Address Line 1<br>Address Line 2</p>
-          </aside>
-          <nav>
-              <!-- REPLACE: Update navigation links -->
-              <h6 class="footer-title">Navigation</h6>
-              <a href="#" class="link link-hover">Home</a>
-              <a href="#about" class="link link-hover">About</a>
-              <a href="#how-it-works" class="link link-hover">How It Works</a>
-              <a href="#packages" class="link link-hover">Pricing</a>
-              <a href="#testimonials" class="link link-hover">Testimonials</a>
-              <a href="#faq" class="link link-hover">FAQ</a>
-          </nav>
-          <nav>
-            <!-- REPLACE: Add your legal pages or remove this section -->
-            <h6 class="footer-title">Legal</h6>
-            <a href="#" class="link link-hover">Terms and Conditions</a>
-            <a href="#" class="link link-hover">Privacy Policy</a>
-            <a href="#" class="link link-hover">Refund Policy</a>
-          </nav>
-          <nav>
-            <!-- REPLACE: Update with your projects/links or remove this section -->
-            <h6 class="footer-title">Other Projects</h6>
-            <a href="#" class="link link-hover">Project 1</a>
-            <a href="#" class="link link-hover">Project 2</a>
-            <a href="#" class="link link-hover">Project 3</a>
-          </nav>
-          <nav>
-              <!-- REPLACE: Update social media links -->
-              <h6 class="footer-title">Connect</h6>
-              <div class="grid grid-flow-col gap-4">
-                  <a href="#" target="_blank">
-                      <i data-lucide="twitter" class="w-6 h-6"></i>
-                  </a>
-                  <a href="#" target="_blank">
-                      <i data-lucide="linkedin" class="w-6 h-6"></i>
-                  </a>
-                  <a href="#" target="_blank">
-                      <i data-lucide="github" class="w-6 h-6"></i>
-                  </a>
-              </div>
-              <!-- REPLACE: Update or remove chat button -->
-              <div class="mt-4">
-                  <a class="btn btn-primary btn-sm" href="#cta">Contact Us</a>
-              </div>
-          </nav>
-      </footer>
+    <!-- Initialize Lucide Icons -->
+    <script>
+      lucide.createIcons();
+    </script>
 
-      <!-- Initialize Lucide Icons -->
-      <script>
-        lucide.createIcons();
-      </script>
-
-      <!-- OPTIONAL: Save theme preference to localStorage -->
-      <!-- Uncomment the script below to persist theme selection across page reloads -->
-      <!--
+    <!-- OPTIONAL: Save theme preference to localStorage -->
+    <!-- Uncomment the script below to persist theme selection across page reloads -->
+    <!--
       <script>
         // Load saved theme from localStorage on page load
         const savedTheme = localStorage.getItem('theme') || 'light';
