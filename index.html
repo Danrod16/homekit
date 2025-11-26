@@ -90,7 +90,7 @@
 
     <!-- 1. Hero Section -->
     <!-- REPLACE: Update all text, badge, and hero image -->
-    <section class="hero min-h-screen pt-12">
+    <section class="hero min-h-screen pt-24 lg:pt-12 pb-12 lg:pb-0">
       <div
         class="container mx-auto flex flex-col lg:flex-row-reverse items-center px-4"
       >
@@ -102,7 +102,8 @@
         />
         <div class="text-center lg:text-left lg:mr-8">
           <h1 class="text-5xl font-bold leading-tight mb-6">
-            Your Health, Your home<br />Lab-Grade Results Delivered.
+            Professional <span class="text-primary">Lab Testing</span><br />at
+            Your Doorstep, monthly
           </h1>
           <p class="text-lg leading-relaxed text-base-content/80 mb-8">
             Professional at-home laboratory testing for wellness monitoring in
@@ -115,6 +116,9 @@
             <a href="#cta" class="btn btn-primary btn-lg">Join the Waitlist</a>
             <a href="#tests" class="btn btn-outline btn-lg">View All Tests</a>
           </div>
+          <p class="text-xs text-base-content/60 mt-4 text-center lg:text-left">
+            First 100 get a lifetime discount when joining before launch
+          </p>
           <!-- Social Proof Section -->
           <div class="mt-12">
             <div class="grid grid-cols-3 gap-6">
@@ -161,7 +165,7 @@
     </section>
 
     <!-- 2. Available Tests Section -->
-    <section class="py-24 bg-base-200" id="tests" data-aos="fade-up">
+    <section class="py-24 bg-primary" id="tests" data-aos="fade-up">
       <div class="container mx-auto px-4">
         <div class="text-center max-w-3xl mx-auto mb-12">
           <h2 class="text-4xl font-bold mb-4">Tests Available at Launch</h2>
@@ -465,9 +469,7 @@
 
         <!-- Additional offerings banner -->
         <div class="mt-16 text-center">
-          <div
-            class="card bg-base-200 border border-base-300 max-w-3xl mx-auto"
-          >
+          <div class="card bg-white border border-base-300 max-w-3xl mx-auto">
             <div class="card-body">
               <div class="flex items-center justify-center gap-2 mb-3">
                 <i data-lucide="plus-circle" class="w-5 h-5 text-primary"></i>
@@ -501,6 +503,8 @@
             <div class="card-body flex flex-col items-center">
               <div
                 class="badge badge-outline badge-primary badge-lg text-lg font-bold mb-4"
+                <div
+                class="badge badge-outline badge-primary badge-lg text-lg font-bold mb-4"
               >
                 Step 1
               </div>
@@ -523,7 +527,9 @@
           <!-- Step 2 -->
           <div class="relative">
             <div class="card-body flex flex-col items-center">
-              <div class="badge badge-ghost badge-lg text-lg font-bold mb-4">
+              <div
+                class="badge badge-outline badge-primary badge-lg text-lg font-bold mb-4"
+              >
                 Step 2
               </div>
               <div class="font-bold text-2xl mb-4">We Deliver to You</div>
@@ -545,12 +551,14 @@
           <!-- Step 3 -->
           <div class="relative">
             <div class="card-body flex flex-col items-center">
-              <div class="badge badge-ghost badge-lg text-lg font-bold mb-4">
+              <div
+                class="badge badge-outline badge-primary badge-lg text-lg font-bold mb-4"
+              >
                 Step 3
               </div>
               <div class="font-bold text-2xl mb-4">Track in Your App</div>
               <div
-                class="mx-auto mb-6 w-56 h-56 rounded-xl flex items-center justify-center overflow-hidden"
+                class="mx-auto mb-6 w-58 h-56 rounded-xl flex items-center justify-center overflow-hidden"
               >
                 <img
                   src="images/step3.png"
@@ -574,18 +582,11 @@
       <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="lg:w-1/2 flex justify-center">
-            <div
-              class="w-full h-96 flex overflow-hidden rounded-2xl shadow-2xl bg-base-200"
-            >
-              <figure
-                class="overflow-hidden flex items-center justify-center w-full h-full"
-              >
-                <i
-                  data-lucide="palm-tree"
-                  class="w-32 h-32 text-base-content opacity-20"
-                ></i>
-              </figure>
-            </div>
+            <img
+              src="images/wellness-app.png"
+              alt="Wellness App Screenshot"
+              class="w-full h-96 object-cover rounded-2xl shadow-2xl"
+            />
           </div>
           <div class="lg:w-1/2">
             <h2 class="text-4xl font-bold mb-6">Built for Bali's Lifestyle</h2>
@@ -704,12 +705,10 @@
             <div class="card-body p-4 md:p-6">
               <h3 class="card-title text-lg md:text-xl">Monthly Wellness</h3>
               <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">
-                <span class="line-through text-base-300 text-xl">$99</span>
-                <span class="ml-2">$79</span>
-                <span class="text-xs md:text-sm font-normal">/month</span>
+                Coming Soon
               </div>
-              <span class="text-xs md:text-sm text-base-300 font-normal"
-                >*Waitlist early bird pricing</span
+              <span class="text-xs md:text-sm text-base-content/60 font-normal"
+                >Pricing to be announced</span
               >
               <div
                 class="badge badge-outline badge-primary mb-3 md:mb-4 text-xs md:text-sm"
@@ -776,10 +775,11 @@
             <div class="card-body p-4 md:p-6">
               <h3 class="card-title text-lg md:text-xl">One-Time Test</h3>
               <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">
-                From $49<span class="text-xs md:text-sm font-normal">
-                  per test</span
-                >
+                Coming Soon
               </div>
+              <span class="text-xs md:text-sm text-base-content/60 font-normal"
+                >Pricing to be announced</span
+              >
               <div class="badge badge-ghost mb-3 md:mb-4 text-xs md:text-sm">
                 ON-DEMAND
               </div>
@@ -842,9 +842,11 @@
           >
             <div class="card-body p-4 md:p-6">
               <h3 class="card-title text-lg md:text-xl">Wellness Services</h3>
-              <div class="text-2xl md:text-3xl font-bold my-3 md:my-4">
-                Custom
-                <span class="text-xs md:text-sm font-normal">pricing</span>
+              <div class="my-3 md:my-4">
+                <div class="text-2xl md:text-3xl font-bold">Custom Pricing</div>
+                <div class="text-xs text-base-content/50 mt-1">
+                  Contact for rates
+                </div>
               </div>
               <div class="badge badge-ghost mb-3 md:mb-4 text-xs md:text-sm">
                 IV DRIPS • RECOVERY
@@ -906,7 +908,7 @@
     </section>
 
     <!-- 6. App Section -->
-    <section class="py-20 bg-base-200" id="app" data-aos="fade-up">
+    <section class="py-20" id="app" data-aos="fade-up">
       <div class="container mx-auto px-4">
         <div
           class="flex flex-col lg:flex-row-reverse items-center justify-between gap-12 max-w-6xl mx-auto"
@@ -991,20 +993,11 @@
           </div>
 
           <div class="lg:w-1/2 flex justify-center">
-            <!-- Placeholder for app mockup -->
-            <div class="mockup-phone border-primary">
-              <div class="camera"></div>
-              <div class="display">
-                <div
-                  class="artboard artboard-demo phone-1 bg-gradient-to-br from-base-100 to-base-200 flex items-center justify-center"
-                >
-                  <i
-                    data-lucide="smartphone"
-                    class="w-24 h-24 text-base-content opacity-20"
-                  ></i>
-                </div>
-              </div>
-            </div>
+            <img
+              src="images/app-mockup.png"
+              alt="App Mockup"
+              class="w-full h-full object-contain rounded-2xl"
+            />
           </div>
         </div>
       </div>
